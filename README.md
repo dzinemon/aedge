@@ -6,4 +6,16 @@ Branches:
 * master
 * ae-dev
 
-### Jekyll + Gulp
+### Jekyll part
+
+Clone/fork the project
+
+Install Jekyll - [Quick start](https://jekyllrb.com/docs/quickstart/)
+
+run
+```
+bundle install
+```
+```
+jekyll serve
+```
