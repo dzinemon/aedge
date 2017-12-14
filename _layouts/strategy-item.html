@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include head.html %}
+</head>
+
+<body class=" ">
+  <a id="start"></a>
+  <!--end of notification-->
+  {% include partials/nav.html %}
+  <div class="main-container">
+  {% if page.atitle %}
+  {% include partials/page-title.html %}
+  {% endif %}
+
+
+  {% include partials/breadcrumbs.html %}
+
+    <section class="unpad">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-md-push-3 col-sm-12">
+            <article class="mb--3">
+              <div class="article__title text-center">
+                <h1 class="h2">Building an online audience</h1>
+                <span>May 2nd 2016 in </span>
+                <span>
+                  <a href="#">Web Design</a>
+                </span>
+              </div>
+              <div class="article__body">
+                {{ content }}
+              </div>
+            </article>
+          </div>
+          <div class="col-md-3 col-md-pull-9 col-sm-6">
+        <div class="sidebar boxed boxed--border boxed--lg bg--secondary">
+
+          <div class="sidebar__widget">
+            <h5>Text Widget</h5>
+            <p>
+              Our new digital products will take your workflow to all-new levels of high productivity. We know you'll find everything you need - and more! Start building with Stack.
+            </p>
+          </div>
+
+          <div class="sidebar__widget">
+            <h5>Categories</h5>
+            <ul>
+              <li>
+                <a href="#">Freelancing</a>
+              </li>
+              <li>
+                <a href="#">Design</a>
+              </li>
+              <li>
+                <a href="#">Small Business</a>
+              </li>
+              <li>
+                <a href="#">Entrepreneurship</a>
+              </li>
+              <li>
+                <a href="#">Marketing</a>
+              </li>
+              <li>
+                <a href="#">Inspiration</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar__widget">
+            <h5>All Strategies</h5>
+            <ul>
+            {% assign strategies = site.trading-strategies | where:"category","trading-strategies" %}
+
+            {% for item in strategies %}
+              <li>
+                <a href="{{ item.url }}">{{ item.atitle }}</a>
+              </li>
+            {% endfor %}
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    {% include footer.html bg-class="bg--dark" %}
+  </div>
+  <!--<div class="loader"></div>-->
+  <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
+    <i class="stack-interface stack-up-open-big"></i>
+  </a>
+  {% include script.html %}
+</body>
+
+</html>

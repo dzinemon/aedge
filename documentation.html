@@ -1,0 +1,125 @@
+---
+layout: docs
+
+
+
+---
+
+
+
+
+<section class="imagebg image--light cover cover-blocks bg--secondary">
+  <div class="background-image-holder hidden-xs">
+    <img alt="background" src="img/promo-1.jpg" />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-5 col-md-offset-1">
+        <div>
+          <h1>Navigation Sidebar Column</h1>
+          <p class="lead">
+            Stack includes support for a sidebar column navigation the left, or right of the page
+          </p>
+          <hr class="short">
+          <p>
+            Explore all of Stack's modular elements
+            <br /> at the
+            <a href="elements.html">Element Index Page &rarr;</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-8 col-md-offset-2">
+        <div class="boxed bg--secondary boxed--lg boxed--border">
+          <h4>Sidebar Column Markup</h4>
+          <p>
+            As with all other navigation types in Stack, the sidebar column element should reside inside the
+            <strong>.nav-container</strong> element, with the additional class
+            <strong>.nav-container--sidebar</strong> being required to correctly disperse the space on the page.
+          </p>
+          <p>
+            The sidebar column navigation itself should have the class
+            <strong>.nav-sidebar-column</strong> and can be filled out with whatever content is required. Proceeding the nav-sidebar-column is the
+            <strong>.nav-sidebar-column-toggle</strong> which allows the sidebar navigation to be shown on smaller screen sizes.
+          </p>
+          <p>
+            The markup snippet below is all that's required to set up a sidebar column navigation on the page (the contents of the sidebar is represented by '...':
+          </p>
+          <pre>
+&lt;div class="nav-container nav-container--sidebar"&gt;
+	&lt;div class="nav-sidebar-column"&gt;
+		...
+	&lt;/div&gt;
+	&lt;div class="nav-sidebar-column-toggle visible-xs visible-sm" data-toggle-class=".nav-sidebar-column;active"&gt;
+		&lt;i class="stack-menu"&gt;&lt;/i&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-8 col-md-offset-2">
+        <div class="boxed bg--secondary boxed--lg boxed--border">
+          <h4>Switching Column Sides</h4>
+          <p>
+            Simply add the class
+            <strong>.nav-container--right</strong> to the
+            <strong>.nav-container</strong> element to switch the sidebar column to the right of the page.
+          </p>
+          <div class="text-block">
+            <a href="#" data-toggle-class=".nav-container;nav-container--right" class="btn btn--primary">
+                                        <span class="btn__text">
+                                            Click to switch sides
+                                        </span>
+                                    </a>
+          </div>
+          <pre>
+&lt;div class="nav-container nav-container--sidebar nav-container--right"&gt;
+	&lt;div class="nav-sidebar-column"&gt;
+		...
+	&lt;/div&gt;
+	&lt;div class="nav-sidebar-column-toggle visible-xs visible-sm" data-toggle-class=".nav-sidebar-column;active"&gt;
+		&lt;i class="stack-menu"&gt;&lt;/i&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+<section class="text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="cta">
+          <h2>See the Navigation Sidebar Column in action</h2>
+          <a class="btn btn--primary type--uppercase" href="home-fitness.html">
+                                    <span class="btn__text">
+                                        View Home Fitness
+                                    </span>
+                                </a>
+          <p class="type--fine-print">or try the
+            <a href="#">live builder &nearr;</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>

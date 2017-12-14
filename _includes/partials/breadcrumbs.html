@@ -5,9 +5,9 @@
         <a href="#">Home</a>
       </li>
       <li>
-        <a href="#">Elements</a>
+        <a href="/{{ page.category }}">{{ page.category | replace: '-', ' ' | capitalize }}</a>
       </li>
-      <li>Titles</li>
+      <li>{{ page.atitle }}</li>
     </ol>
   </div>
 </div>

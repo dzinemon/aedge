@@ -41,15 +41,26 @@
                     <div class="row">
                       <div class="dropdown__content col-md-2 col-sm-4">
                         <ul class="menu-vertical">
-                        {% assign solutions = site.trading-software-solutions | where:"category","trading-software-solutions" %}
-
-                        {% for item in solutions %}
                           <li>
-                            <a href="{{ item.url }}">
-                              {{ item.atitle }}
+                            <a href="/portfolio-management">
+                              Portfolio management
                             </a>
                           </li>
-                        {% endfor %}
+                          <li>
+                            <a href="page-careers-single.html">
+                              Portfolio Backtest
+                            </a>
+                          </li>
+                          <li>
+                            <a href="page-careers-single.html">
+                              Risk Analysis
+                            </a>
+                          </li>
+                          <li>
+                            <a href="page-careers-single.html">
+                              Live Trading
+                            </a>
+                          </li>
                         </ul>
                       </div>
                       <!--end dropdown content-->

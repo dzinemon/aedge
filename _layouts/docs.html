@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include head.html %}
+</head>
+
+<body class=" ">
+  <a id="start"></a>
+
+  {% include docs/nav-sidebar.html %}
+
+
+  <div class="main-container">
+  {% if page.atitle %}
+  {% include partials/page-title.html %}
+  {% endif %}
+
+    {{ content }}
+
+    {% include docs/docs-footer.html %}
+  </div>
+  <!--<div class="loader"></div>-->
+  <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
+    <i class="stack-interface stack-up-open-big"></i>
+  </a>
+  {% include script.html %}
+</body>
+
+</html>
