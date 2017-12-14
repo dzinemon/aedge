@@ -1,0 +1,43 @@
+---
+layout: default
+
+atitle: Volatility
+subtitle: "We delivered a showcase event for this renowned Melbourne design company that emphaised their heritage and craftsmanship."
+
+category: trading-strategies
+permalink: /trading-strategies/volatility/
+icon: icon-Billing
+label: hot
+---
+
+
+<section class="bg--secondary">
+  <div class="container">
+    <div class="row">
+      {% assign volatilities = site.volatility | where:"category","volatility" %}
+
+      {% for item in volatilities %}
+      <div class="col-sm-6">
+        <div class="feature feature-2 feature--featured boxed boxed--border">
+          <i class="icon  icon--lg {{ item.icon }} color--primary"></i>
+          <div class="feature__body">
+            <h5>{{ item.atitle }}</h5>
+            <p>
+              {{ item.subtitle }}
+            </p>
+            <a href="{{ item.url }}">
+                Learn more
+            </a>
+            {% if item.label == 'hot'%}
+            <span class="label">Hot</span>
+            {% endif %}
+          </div>
+        </div>
+        <!--end feature-->
+      </div>
+      {% endfor %}
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
