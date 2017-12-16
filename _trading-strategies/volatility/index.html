@@ -1,0 +1,28 @@
+---
+layout: default
+
+atitle: Volatility
+subtitle: "We delivered a showcase event for this renowned Melbourne design company that emphaised their heritage and craftsmanship."
+
+name: volatility
+permalink: /trading-strategies/volatility/
+icon: icon-Billing
+label: hot
+---
+
+<section class="bg--secondary unpad">
+{% include trading-strategies/strategies-cat-crumbs.html %}
+  <div class="container">
+    <div class="row">
+      {% assign volatilities = site.trading-strategies | where:"category","volatility" %}
+
+      {% for item in volatilities %}
+
+        {% include trading-strategies/category-thumb.html %}
+
+      {% endfor %}
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>

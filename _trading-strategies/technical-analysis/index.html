@@ -1,0 +1,27 @@
+---
+layout: default
+
+atitle: Technical analysis
+subtitle: "We delivered a showcase event for this renowned Melbourne design company that emphaised their heritage and craftsmanship."
+
+name: technical-analysis
+permalink: /:collection/technical-analysis/
+icon: icon-Bank
+---
+
+<section class="bg--secondary unpad">
+{% include trading-strategies/strategies-cat-crumbs.html %}
+  <div class="container">
+    <div class="row">
+      {% assign analysys = site.trading-strategies | where:"category","technical-analysis" %}
+
+      {% for item in analysys %}
+
+        {% include trading-strategies/category-thumb.html %}
+
+      {% endfor %}
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>

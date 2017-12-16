@@ -1,0 +1,16 @@
+<div class="col-sm-6">
+  <div class="feature feature-2 boxed boxed--lg boxed--border
+   {% if item.label == 'hot'%}feature--featured{% endif %}">
+    <i class="icon {{ item.icon }} icon--lg color--primary"></i>
+    <div class="feature__body">
+      <h5>{{ item.atitle }}</h5>
+      <p>
+        {{ item.subtitle }}
+      </p>
+      <a href="{{ item.url }}">Learn More</a>
+      {% if item.label == 'hot'%}
+      <span class="label">Hot</span>
+      {% endif %}
+    </div>
+  </div>
+</div>

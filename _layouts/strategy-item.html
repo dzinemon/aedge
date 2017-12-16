@@ -15,7 +15,7 @@
   {% endif %}
 
 
-  {% include partials/breadcrumbs.html %}
+  {% include trading-strategies/strategy-item-crumbs.html %}
 
     <section class="unpad">
       <div class="container">
@@ -38,45 +38,94 @@
         <div class="sidebar boxed boxed--border boxed--lg bg--secondary">
 
           <div class="sidebar__widget">
-            <h5>Text Widget</h5>
-            <p>
-              Our new digital products will take your workflow to all-new levels of high productivity. We know you'll find everything you need - and more! Start building with Stack.
-            </p>
-          </div>
-
-          <div class="sidebar__widget">
-            <h5>Categories</h5>
+            <h5>{{ page.category | replace: '-', ' ' | capitalize }} categories</h5>
             <ul>
-              <li>
-                <a href="#">Freelancing</a>
-              </li>
-              <li>
-                <a href="#">Design</a>
-              </li>
-              <li>
-                <a href="#">Small Business</a>
-              </li>
-              <li>
-                <a href="#">Entrepreneurship</a>
-              </li>
-              <li>
-                <a href="#">Marketing</a>
-              </li>
-              <li>
-                <a href="#">Inspiration</a>
-              </li>
+              {% if page.category == 'mean-reversion' %}
+                {% assign reversions = site.trading-strategies | where:"category","mean-reversion" %}
+
+                {% for item in reversions %}
+                  {% unless item.url == page.url %}
+                    <li>
+                      <a href="{{ item.url }}">{{ item.atitle }}</a>
+                    </li>
+                  {% endunless %}
+
+                {% endfor %}
+
+              {% elsif page.category == 'technical-analysis' %}
+
+                {% assign analysys = site.trading-strategies | where:"category","technical-analysis" %}
+
+                {% for item in analysys %}
+
+                  {% unless item.url == page.url %}
+                    <li>
+                      <a href="{{ item.url }}">{{ item.atitle }}</a>
+                    </li>
+                  {% endunless %}
+
+                {% endfor %}
+
+              {% elsif page.category == 'volatility' %}
+
+                {% assign volatilities = site.trading-strategies | where:"category","volatility" %}
+
+                {% for item in volatilities %}
+
+                  {% unless item.url == page.url %}
+                    <li>
+                      <a href="{{ item.url }}">{{ item.atitle }}</a>
+                    </li>
+                  {% endunless %}
+
+                {% endfor %}
+
+              {% elsif page.category == 'momentum' %}
+
+                {% assign momentums = site.trading-strategies | where:"category","momentum" %}
+
+                {% for item in momentums %}
+
+                  {% unless item.url == page.url %}
+                    <li>
+                      <a href="{{ item.url }}">{{ item.atitle }}</a>
+                    </li>
+                  {% endunless %}
+
+                {% endfor %}
+
+              {% elsif page.category == 'portfolio-optimization' %}
+
+                {% assign optimizations = site.trading-strategies | where:"category","portfolio-optimization" %}
+
+                {% for item in optimizations %}
+
+                  {% unless item.url == page.url %}
+                    <li>
+                      <a href="{{ item.url }}">{{ item.atitle }}</a>
+                    </li>
+                  {% endunless %}
+
+                {% endfor %}
+
+              {% endif %}
+
             </ul>
           </div>
 
           <div class="sidebar__widget">
             <h5>All Strategies</h5>
             <ul>
-            {% assign strategies = site.trading-strategies | where:"category","trading-strategies" %}
+            {% assign strategies = site.trading-strategies %}
 
             {% for item in strategies %}
+            {% if item.name %}
               <li>
-                <a href="{{ item.url }}">{{ item.atitle }}</a>
+                <a href="{{ item.url }}">
+                  {{ item.atitle }}
+                </a>
               </li>
+            {% endif %}
             {% endfor %}
 
             </ul>

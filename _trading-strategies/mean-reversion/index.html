@@ -1,0 +1,28 @@
+---
+layout: default
+
+atitle: Mean reversion
+subtitle: "We delivered a showcase event for this renowned Melbourne design company that emphaised their heritage and craftsmanship."
+
+name: mean-reversion
+permalink: /:collection/mean-reversion/
+icon: icon-Aim
+---
+
+
+<section class="bg--secondary unpad">
+{% include trading-strategies/strategies-cat-crumbs.html %}
+  <div class="container">
+    <div class="row">
+      {% assign revisions = site.trading-strategies | where:"category","mean-reversion" %}
+
+      {% for item in revisions %}
+
+        {% include trading-strategies/category-thumb.html %}
+
+      {% endfor %}
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>

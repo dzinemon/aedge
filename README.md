@@ -19,3 +19,12 @@ bundle install
 ```
 jekyll serve
 ```
+
+### Mathjax-in-markdown
+
+Use the MathJax delimiters to start and end each formula as follows:
+
+* For centered formulae, use `\\[` and `\\]`.
+* For inline formulae, use `\\(` and `\\)`.
+
+source - This [blog post](https://hiltmon.com/blog/2017/01/28/mathjax-in-markdown/)

@@ -1,0 +1,29 @@
+---
+layout: default
+
+atitle: Portfolio optimization
+subtitle: "We delivered a showcase event for this renowned Melbourne design company that emphaised their heritage and craftsmanship."
+
+name: portfolio-optimization
+permalink: /:collection/portfolio-optimization/
+
+icon: icon-Clock-Back
+label: hot
+---
+
+<section class="bg--secondary unpad">
+{% include trading-strategies/strategies-cat-crumbs.html %}
+  <div class="container">
+    <div class="row">
+      {% assign optimizations = site.trading-strategies | where:"category","portfolio-optimization" %}
+
+      {% for item in optimizations %}
+
+        {% include trading-strategies/category-thumb.html %}
+
+      {% endfor %}
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>

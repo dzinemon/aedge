@@ -9,12 +9,14 @@ subtitle: "Whether you’re building a welcome mat for your SaaS or a clean, cor
 ---
 
 
-<section class="bg--secondary">
+<section class="bg--secondary unpad">
+ {% include trading-strategies/strategies-crumbs.html %}
   <div class="container">
     <div class="row">
-      {% assign strategies = site.trading-strategies | where:"category","trading-strategies" %}
+      {% assign strategies = site.trading-strategies %}
 
       {% for item in strategies %}
+      {% if item.name %}
       <div class="col-sm-6">
         <div class="feature feature-2 feature--featured boxed boxed--border">
           <i class="icon  icon--lg {{ item.icon }} color--primary"></i>
@@ -33,6 +35,7 @@ subtitle: "Whether you’re building a welcome mat for your SaaS or a clean, cor
         </div>
         <!--end feature-->
       </div>
+      {% endif %}
       {% endfor %}
     </div>
     <!--end of row-->

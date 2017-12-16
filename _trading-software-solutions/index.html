@@ -6,16 +6,18 @@ atitle: Trading Software Solutions
 subtitle: Subtitle for this page
 ---
 
+{% include trading-solutions/solutions-crumbs.html %}
+
 {% assign solutions = site.trading-software-solutions | where:"category","trading-software-solutions" %}
 
 {% for item in solutions %}
 
 
-<section class="switchable feature-large bg--secondary">
+<section class="switchable feature-large bg--secondary space--sm">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <img alt="Image" class="border--round" src="/assets/img/work-6.jpg" />
+                <img alt="Image" class="border--round" src="http://via.placeholder.com/555x370" />
             </div>
             <div class="col-sm-6 col-md-5">
                 <div class="switchable__text">

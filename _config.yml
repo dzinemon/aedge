@@ -45,25 +45,13 @@ livereload: true
 
 permalink: pretty
 
+#Syntax highlighter
+highlighter: rouge
+
 collections:
-  trading-strategies:
-    output: true
-    permalink: /:collection/:name
   trading-software-solutions:
     output: true
     permalink: /:collection/:name
-  mean-reversion:
+  trading-strategies:
     output: true
-    permalink: /trading-strategies/:collection/:name
-  momentum:
-    output: true
-    permalink: /trading-strategies/:collection/:name
-  portfolio-optimization:
-    output: true
-    permalink: /trading-strategies/:collection/:name
-  technical-analysis:
-    output: true
-    permalink: /trading-strategies/:collection/:name
-  volatility:
-    output: true
-    permalink: /trading-strategies/:collection/:name
+    permalink: /:collection/:categories/:name
