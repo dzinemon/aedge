@@ -1,8 +1,8 @@
 ---
 layout: strategy-item
 
-atitle: technical-analysis Item 2 Demo title 
-subtitle: technical-analysis Item 2 Super awesome subtitle
+atitle: Technical-analysis Item 2 Demo title 
+subtitle: Technical-analysis Item 2 Super awesome subtitle
 
 category: technical-analysis
 icon: icon-Camera

@@ -5,17 +5,15 @@
   {% include head.html %}
 </head>
 
-<body class=" ">
+<body class="bg--secondary">
   <a id="start"></a>
 
-  {% include docs/docs-nav-top.html %}
+  {% include partials/nav.html %}
+
   {% include docs/nav-sidebar.html %}
 
 
   <div class="main-container">
-  {% if page.atitle %}
-  {% include partials/page-title.html %}
-  {% endif %}
 
     {{ content }}
 

@@ -1,4 +1,106 @@
 ---
+layout: docs
 
+permalink: /docs/
 
 ---
+
+
+<section class="imagebg image--light cover cover-blocks bg--primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-md-offset-1">
+        <div>
+          <h1>AlphaEdge Docs</h1>
+          <p class="lead">
+            Stack includes support for a sidebar column navigation the left, or right of the page
+          </p>
+          <div class="text-left">
+            <form class="form--horizontal">
+              <div class="col-sm-8">
+                <input type="text" name="search" placeholder="Type search keywords here">
+              </div>
+              <div class="col-sm-4">
+                <button type="submit" class="btn btn--primary type--uppercase">Search</button>
+              </div>
+            </form>
+          </div>
+          <hr class="short">
+          <p>
+            Explore all of Stack's modular elements
+            <br /> at the
+            <a href="elements.html">Element Index Page &rarr;</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="">Getting Started With AlphaEdge</h2>
+      </div>
+    </div>
+    <div class="row">
+      {% assign docs = site.docs | sort: 'order' %}
+
+      {% for item in docs %}
+        {% if item.name %}
+      <div class="col-sm-3">
+        <a href="{{ item.url }}" class="block">
+          <div class="feature boxed boxed--border border--round text-center">
+            <i class="icon--lg {{ item.icon }}"></i>
+            <span class="h4 color--primary">{{ item.atitle }}</span>
+          </div>
+        </a>
+      </div>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+    <!--end of row-->
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-8 col-md-offset-2">
+        <div class="boxed bg--secondary boxed--lg boxed--border">
+          <h4>Sidebar Column Markup</h4>
+          <p>
+            As with all other navigation types in Stack, the sidebar column element should reside inside the
+            <strong>.nav-container</strong> element, with the additional class
+            <strong>.nav-container--sidebar</strong> being required to correctly disperse the space on the page.
+          </p>
+          <p>
+            The sidebar column navigation itself should have the class
+            <strong>.nav-sidebar-column</strong> and can be filled out with whatever content is required. Proceeding the nav-sidebar-column is the
+            <strong>.nav-sidebar-column-toggle</strong> which allows the sidebar navigation to be shown on smaller screen sizes.
+          </p>
+          <p>
+            The markup snippet below is all that's required to set up a sidebar column navigation on the page (the contents of the sidebar is represented by '...':
+          </p>
+        {% highlight html %}
+          <div class="container">
+            <div class="row ">
+              <div class="col-md-6">
+                <h3>'...'</h3>
+              </div>
+            </div>
+          </div>
+       {% endhighlight %}
+        </div>
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>

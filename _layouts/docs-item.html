@@ -1,0 +1,50 @@
+---
+layout: docs
+
+
+---
+
+  {% if page.atitle %}
+  {% include partials/page-title.html %}
+  {% endif %}
+
+  {% if page.name %}
+
+  <div class="container">
+  <div class="col-sm-12">
+    <ol class="breadcrumbs">
+      <li>
+        <a href="/docs">Documentation</a>
+      </li>
+      <li>{{ page.atitle }}</li>
+    </ol>
+  </div>
+</div>
+
+
+  {% else %}
+  <div class="container">
+  <div class="col-sm-12">
+    <ol class="breadcrumbs">
+      <li>
+        <a href="/docs">Documentation</a>
+      </li>
+      <li>
+        <a href="/docs/{{ page.category }}/">{{ page.category | replace: '-', ' ' | capitalize }}</a>
+      </li>
+      <li>{{ page.atitle }}</li>
+    </ol>
+  </div>
+</div>
+
+
+  {% endif %}
+
+
+<section class="unpad">
+  <div class="container">
+    <div class="col-sm-12">
+      {{ content }}
+    </div>
+  </div>
+</section>
