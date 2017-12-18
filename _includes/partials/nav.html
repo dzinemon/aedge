@@ -101,26 +101,18 @@
                     <div class="row">
                       <div class="dropdown__content col-md-2 col-sm-4">
                         <ul class="menu-vertical">
+                          {% assign docs = site.docs | sort: 'order' %}
+
+                          {% for item in docs %}
+                            {% if item.name %}
+
                           <li>
-                            <a href="page-careers.html">
-                                                            User Guide
-                                                        </a>
+                            <a href="{{ item.url }}">
+                              {{ item.atitle }}
+                            </a>
                           </li>
-                          <li>
-                            <a href="page-careers.html">
-                                                            Developer Guide
-                                                        </a>
-                          </li>
-                          <li>
-                            <a href="page-careers-single.html">
-                                                            Framework API
-                                                        </a>
-                          </li>
-                          <li>
-                            <a href="page-careers-single.html">
-                                                            Tutorials
-                                                        </a>
-                          </li>
+                            {% endif %}
+                          {% endfor %}
                         </ul>
                       </div>
                       <!--end dropdown content-->
@@ -139,14 +131,14 @@
                       <div class="dropdown__content col-md-2 col-sm-4">
                         <ul class="menu-vertical">
                           <li>
-                            <a href="page-careers.html">
-                                                            Community Forum
-                                                        </a>
+                            <a href="{{ site.community-forum }}">
+                              Community Forum
+                            </a>
                           </li>
                           <li>
-                            <a href="page-careers.html">
-                                                            Contact Support
-                                                        </a>
+                            <a href="/contact">
+                              Contact Support
+                            </a>
                           </li>
 
                         </ul>
@@ -159,7 +151,7 @@
                 <!--end dropdown container-->
               </li>
               <li>
-                <a href="blog.html">
+                <a href="/blog">
                                     Blog
                                 </a>
               </li>
