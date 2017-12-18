@@ -55,3 +55,6 @@ collections:
   trading-strategies:
     output: true
     permalink: /:collection/:categories/:name
+  docs:
+    output: true
+    permalink: /:collection/:categories/:name
