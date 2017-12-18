@@ -28,3 +28,11 @@ Use the MathJax delimiters to start and end each formula as follows:
 * For inline formulae, use `\\(` and `\\)`.
 
 source - This [blog post](https://hiltmon.com/blog/2017/01/28/mathjax-in-markdown/)
+
+add `math: true` to front-matter to add Mathjax Script to the page
+
+### Highlight with Rouge
+
+`{% highlight python %}
+x = ('a', 1, False)
+{% endhighlight %}`
