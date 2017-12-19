@@ -12,13 +12,7 @@ Clone/fork the project
 
 Install Jekyll - [Quick start](https://jekyllrb.com/docs/quickstart/)
 
-run
-```
-bundle install
-```
-```
-jekyll serve
-```
+run `bundle install` & `jekyll serve`
 
 ### Mathjax-in-markdown
 
@@ -36,3 +30,28 @@ add `math: true` to front-matter to add Mathjax Script to the page
 `{% highlight python %}
 x = ('a', 1, False)
 {% endhighlight %}`
+
+* Trading Software Solutions
+ * Live Trading
+ * Portfolio management
+ * Portfolio Backtest
+ * Risk Analysis
+* Trading Strategies
+ * Mean Reversion
+  * Mean Variance Optimizer
+ * Portfolio optimisation
+ * Momentum
+  * Protective Asset momentum
+ * Technical analysis
+ * Volatility
+* Docs
+ * User Guide
+ * Developer Guide
+ * Framework API
+ * Tutorials
+* Support
+ * Community Forum
+ * Contact Support
+* Blog
+ * Posts (strategies/blog/doc)
+  
