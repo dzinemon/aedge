@@ -11,219 +11,79 @@
   {% include partials/nav.html %}
   <div class="main-container">
 
-            <section class="space--sm">
-            <div class="container">
+    <section class="space--sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-8">
+            <article>
+              <div class="article__title text-center">
+                <h1 class="h2">{{ page.headline }}</h1>
+                <span>{{ page.date | date: '%B %d, %Y' }}</span>
+                <span>
+                  <a href="/category/{{ page.strategy }}">{{ page.strategy | replace: '-', ' ' | capitalize }}</a>
+                </span>
+              </div>
+              <!--end article title-->
+              <div class="article__body">
+                {{ content }}
+              </div>
+              <div class="article__share text-center">
+                <a class="btn bg--facebook btn--icon" href="#">
+                  <span class="btn__text">
+                      <i class="socicon socicon-facebook"></i>
+                      Share on Facebook
+                  </span>
+                </a>
+                <a class="btn bg--twitter btn--icon" href="#">
+                  <span class="btn__text">
+                      <i class="socicon socicon-twitter"></i>
+                      Share on Twitter
+                  </span>
+                </a>
+              </div>
+            </article>
+            <section class="text-center space--sm">
+              <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 col-md-8">
-                        <article>
-  <div class="article__title text-center">
-    <h1 class="h2">{{ page.headline }}</h1>
-    <span>{{ page.date | date: '%B %d, %Y' }} |</span>
-    <span>
-                                    <a href="#">Web Design</a>
-                                </span>
-  </div>
-  <!--end article title-->
-  <div class="article__body">
-    {{ content }}
-  </div>
-  <div class="article__share text-center">
-    <a class="btn bg--facebook btn--icon" href="#">
-                                    <span class="btn__text">
-                                        <i class="socicon socicon-facebook"></i>
-                                        Share on Facebook
-                                    </span>
-                                </a>
-    <a class="btn bg--twitter btn--icon" href="#">
-                                    <span class="btn__text">
-                                        <i class="socicon socicon-twitter"></i>
-                                        Share on Twitter
-                                    </span>
-                                </a>
-  </div>
-</article>
-<section class="text-center space--sm">
-  <div class="container">
-    <div class="row">
 
-      <div class="boxed boxed--lg bg--dark subscribe-form-1">
-        <h3>Get our latest content in your inbox</h3>
-        <h5>Join over 20,000 satisfied customers</h5>
-        <div class="col-sm-8 col-sm-offset-2 text-left">
-          <form>
-            <input type="text" name="name" placeholder="Your Name">
-            <input type="email" name="email" placeholder="Email Address">
-            <div class="input-checkbox">
-              <input type="checkbox" name="agree" id="input-assigned-0">
-              <label for="input-assigned-0"></label>
-            </div>
-            <span>I have read and agree to the
-                                        <a href="#">terms and conditions</a>
-                                    </span>
-            <button type="submit" class="btn btn--primary type--uppercase">Subscribe To Newsletter</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <!--end of row-->
-  </div>
-  <!--end of container-->
-</section>
-                    </div>
-                    <div class="col-md-4 hidden-sm">
-                        <div class="sidebar boxed boxed--border boxed--lg bg--secondary">
-                            <div class="sidebar__widget">
-                                <h5>Search site</h5>
-                                <form>
-                                    <input type="text" name="query" placeholder="Type search here" />
-                                </form>
-                            </div>
-                            <!--end widget-->
-                            <div class="sidebar__widget">
-                                <h5>Text Widget</h5>
-                                <p>
-                                    Our new digital products will take your workflow to all-new levels of high productivity. We know you'll find everything you need - and more! Start building with Stack.
-                                </p>
-                            </div>
-                            <!--end widget-->
-                            <div class="sidebar__widget">
-                                <h5>Tags</h5>
-                                <ul class="tag-cloud">
-                                    <li>
-                                        <a href="#">Freelancing</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Design</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Small Business</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Entrepreneurship</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Marketing</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Inspiration</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--end widget-->
-                            <div class="sidebar__widget">
-                                <h5>Categories</h5>
-                                <ul>
-                                    <li>
-                                        <a href="#">Freelancing</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Design</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Small Business</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Entrepreneurship</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Marketing</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Inspiration</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--end widget-->
-                            <div class="sidebar__widget">
-                                <h5>Archives</h5>
-                                <ul>
-                                    <li>
-                                        <a href="#">August 2016</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">July 2016</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">June 2016</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">May 2016</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--end widget-->
+                  <div class="boxed boxed--lg bg--dark subscribe-form-1">
+                    <h3>Get our latest content in your inbox</h3>
+                    <h5>Join over 20,000 satisfied customers</h5>
+                    <div class="col-sm-8 col-sm-offset-2 text-left">
+                      <form>
+                        <input type="text" name="name" placeholder="Your Name">
+                        <input type="email" name="email" placeholder="Email Address">
+                        <div class="input-checkbox">
+                          <input type="checkbox" name="agree" id="input-assigned-0">
+                          <label for="input-assigned-0"></label>
                         </div>
+                        <span>I have read and agree to the
+                            <a href="#">terms and conditions</a>
+                        </span>
+                        <button type="submit" class="btn btn--primary type--uppercase">Subscribe To Newsletter</button>
+                      </form>
                     </div>
+                  </div>
                 </div>
-
-                <section class="bg--secondary">
-                    <div class="container">
-                        <div class="row text-block">
-                            <div class="col-sm-12">
-                                <h3>More recent stories</h3>
-                            </div>
-                        </div>
-                        <!--end of row-->
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <article class="feature feature-1">
-                                    <a href="#" class="block">
-                                        <img alt="Image" src="/assets/img/blog-2.jpg">
-                                    </a>
-                                    <div class="feature__body boxed boxed--border">
-                                        <span>May 25th 2016</span>
-                                        <h5>A day in the life of a professional fitness blogger</h5>
-                                        <a href="#">
-                                            Read More
-                                        </a>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-sm-4">
-                                <article class="feature feature-1">
-                                    <a href="#" class="block">
-                                        <img alt="Image" src="/assets/img/blog-3.jpg">
-                                    </a>
-                                    <div class="feature__body boxed boxed--border">
-                                        <span>May 25th 2016</span>
-                                        <h5>Small businesses that expertly leverage their online followings</h5>
-                                        <a href="#">
-                                            Read More
-                                        </a>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-sm-4">
-                                <article class="feature feature-1">
-                                    <a href="#" class="block">
-                                        <img alt="Image" src="/assets/img/blog-4.jpg">
-                                    </a>
-                                    <div class="feature__body boxed boxed--border">
-                                        <span>May 25th 2016</span>
-                                        <h5>Designing efficiently in the age of distraction</h5>
-                                        <a href="#">
-                                            Read More
-                                        </a>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <!--end of row-->
-                    </div>
-                    <!--end of container-->
-                </section>
                 <!--end of row-->
-            </div>
-            <!--end of container-->
-        </section>
+              </div>
+              <!--end of container-->
+            </section>
+          </div>
+          {% include blog/sidebar.html %}
+        </div>
 
+        <!--end of row-->
+      </div>
+      <!--end of container-->
+    </section>
+    {% include blog/recent-posts.html %}
     {% include footer.html bg-class="" %}
   </div>
   <!--<div class="loader"></div>-->
   <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
     <i class="stack-interface stack-up-open-big"></i>
-  </a>
-  {% include script.html %}
+  </a> {% include script.html %}
 </body>
 
 </html>

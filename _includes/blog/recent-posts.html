@@ -1,0 +1,32 @@
+<section class="bg--secondary">
+  <div class="container">
+    <div class="row text-block">
+      <div class="col-sm-12">
+        <h3>Recent posts</h3>
+      </div>
+    </div>
+    <!--end of row-->
+    <div class="row">
+      {% for post in site.posts | limit: 3 %}
+
+      <div class="col-sm-6 col-md-4">
+        <article class="feature feature-1">
+          <a href="{{ post.url }}" class="block">
+            <img alt="Image" src="{{ post.img }}">
+          </a>
+          <div class="feature__body boxed boxed--border">
+            <span>{{ post.date | date: '%b %d, %Y' }}</span>
+            <h5>{{ post.headline }}</h5>
+            <a href="{{ post.url }}">
+                      Read More
+                    </a>
+          </div>
+        </article>
+      </div>
+
+      {% endfor %}
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>

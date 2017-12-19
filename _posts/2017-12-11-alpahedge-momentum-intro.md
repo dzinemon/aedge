@@ -4,8 +4,11 @@ layout: post
 headline: A day in the life of a professional AlphaEdge blogger
 title:  "Welcome to AlphaEdge!"
 date:   2017-11-17 16:16:01 -0600
-#categories: momentum
+categories: volatility
 strategy: volatility
+tags: products trends
+permalink: /:categories/blog/:title
+
 img: http://via.placeholder.com/360x240
 ---
 
