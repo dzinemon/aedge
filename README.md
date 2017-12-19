@@ -31,27 +31,27 @@ add `math: true` to front-matter to add Mathjax Script to the page
 x = ('a', 1, False)
 {% endhighlight %}`
 
-* Trading Software Solutions
- * Live Trading
- * Portfolio management
- * Portfolio Backtest
- * Risk Analysis
-* Trading Strategies
- * Mean Reversion
-  * Mean Variance Optimizer
- * Portfolio optimisation
- * Momentum
-  * Protective Asset momentum
- * Technical analysis
- * Volatility
-* Docs
- * User Guide
- * Developer Guide
- * Framework API
- * Tutorials
-* Support
- * Community Forum
- * Contact Support
-* Blog
- * Posts (strategies/blog/doc)
+1. Trading Software Solutions
+   - Live Trading
+   - Portfolio management
+   - Portfolio Backtest
+   - Risk Analysis
+2. Trading Strategies
+   - Mean Reversion
+     - Mean Variance Optimizer
+   - Portfolio optimisation
+   - Momentum
+     - Protective Asset momentum
+   - Technical analysis
+   - Volatility
+3. Docs
+   - User Guide
+   - Developer Guide
+   - Framework API
+   - Tutorials
+4. Support
+   - Community Forum
+   - Contact Support
+5. Blog
+   - Posts (strategies/blog/doc)
   
