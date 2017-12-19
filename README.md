@@ -6,7 +6,9 @@ Branches:
 * master
 * ae-dev
 
-### Jekyll part
+---
+
+## Jekyll part
 
 Clone/fork the project
 
@@ -30,6 +32,21 @@ add `math: true` to front-matter to add Mathjax Script to the page
 `{% highlight python %}
 x = ('a', 1, False)
 {% endhighlight %}`
+
+
+### Add lightbox feature to image in Markdown
+
+use `{: data-lightbox="true"}`
+
+```markdown
+[![Alt text](http://via.placeholder.com/900x400)](http://via.placeholder.com/1800x800){: data-lightbox="true"}
+```
+
+source - This [blog post](https://kramdown.gettalong.org/quickref.html)
+
+---
+
+### Collections and posts
 
 1. Trading Software Solutions
    - Live Trading

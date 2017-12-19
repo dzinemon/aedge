@@ -23,10 +23,10 @@
           <div class="col-md-9 col-md-push-3 col-sm-12">
             <article class="mb--3">
               <div class="article__title text-center">
-                <h1 class="h2">Building an online audience</h1>
-                <span>May 2nd 2016 in </span>
+                <h2>{{ page.atitle }}</h2>
+                <span>{% if page.date %}{{ page.date | date: '%B %d, %Y' }}{% else %}{{ site.time | date: '%B %d, %Y' }}{% endif %}</span>
                 <span>
-                  <a href="#">Web Design</a>
+                  <a href="/trading-stratefies/{{ page.strategy }}">{{ page.strategy | replace: '-', ' ' | capitalize }}</a>
                 </span>
               </div>
               <div class="article__body">
