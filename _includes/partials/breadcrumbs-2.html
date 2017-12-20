@@ -2,10 +2,10 @@
   <div class="col-sm-12">
     <ol class="breadcrumbs">
       <li>
-        <a href="/">Home</a>
+        <a href='{{ "/" | absolute_url }}'>Home</a>
       </li>
       <li>
-        <a href="/{{ page.category }}">{{ page.category | replace: '-', ' ' | capitalize }}</a>
+        <a href="{{ site.url }}/{{ page.category }}">{{ page.category | replace: '-', ' ' | capitalize }}</a>
       </li>
       <li>{{ page.atitle }}</li>
     </ol>

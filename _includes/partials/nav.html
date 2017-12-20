@@ -3,9 +3,9 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-3 col-sm-2">
-          <a href="/">
-            <img class="logo logo-dark" alt="logo" src="/assets/img/logo-dark.png" />
-            <img class="logo logo-light" alt="logo" src="/assets/img/logo-light.png" />
+          <a href='{{"/" | absolute_url }}'>
+            <img class="logo logo-dark" alt="logo" src='{{ "/assets/img/logo-dark.png" | absolute_url }}' />
+            <img class="logo logo-light" alt="logo" src='{{ "/assets/img/logo-light.png" | absolute_url }}' />
           </a>
         </div>
         <div class="col-xs-9 col-sm-10 text-right">
@@ -24,9 +24,9 @@
       <div class="row">
         <div class="col-md-1 col-sm-2 hidden-xs">
           <div class="bar__module">
-            <a href="/">
-              <img class="logo logo-dark" alt="logo" src="/assets/img/logo-dark.png" />
-              <img class="logo logo-light" alt="logo" src="/assets/img/logo-light.png" />
+            <a href='{{ "/" | absolute_url }}'>
+              <img class="logo logo-dark" alt="logo" src='{{ "/assets/img/logo-dark.png" | absolute_url }}' />
+              <img class="logo logo-light" alt="logo" src='{{ "/assets/img/logo-light.png" | absolute_url }}' />
             </a>
           </div>
           <!--end module-->
@@ -45,7 +45,7 @@
 
                         {% for item in solutions %}
                           <li>
-                            <a href="{{ item.url | relative_url }}">
+                            <a href="{{ item.url | absolute_url }}">
                               {{ item.atitle }}
                             </a>
                           </li>
@@ -71,7 +71,7 @@
                         {% for item in strategies %}
                         {% if item.name %}
                           <li>
-                            <a href="{{ item.url | relative_url }}">
+                            <a href="{{ item.url | absolute_url }}">
                               {{ item.atitle }}
                             </a>
                           </li>
@@ -88,7 +88,7 @@
                 <!--end dropdown container-->
               </li>
               <li>
-                <a href="/pricing">
+                <a href='{{ "/pricing" | absolute_url }}'>
                     Pricing
                 </a>
               </li>
@@ -107,7 +107,7 @@
                             {% if item.name %}
 
                           <li>
-                            <a href="{{ item.url | relative_url }}">
+                            <a href="{{ item.url | absolute_url }}">
                               {{ item.atitle }}
                             </a>
                           </li>
@@ -136,7 +136,7 @@
                             </a>
                           </li>
                           <li>
-                            <a href="/contact">
+                            <a href='{{ "/contact" | absolute_url}}'>
                               Contact Support
                             </a>
                           </li>
@@ -151,12 +151,12 @@
                 <!--end dropdown container-->
               </li>
               <li>
-                <a href="/blog">
+                <a href='{{ "/blog" | absolute_url }}'>
                                     Blog
                                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href='{{ "#" | absolute_url }}'>
                                    About
                                 </a>
               </li>

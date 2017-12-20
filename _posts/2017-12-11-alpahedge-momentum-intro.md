@@ -10,6 +10,10 @@ tags: products trends
 permalink: /:categories/blog/:title
 
 img: http://via.placeholder.com/360x240
+
+seo:
+ type: BlogPosting
+ 
 ---
 
 

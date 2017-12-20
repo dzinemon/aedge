@@ -11,6 +11,9 @@ permalink: /:categories/blog/:title
 
 img: http://via.placeholder.com/360x240
 
+seo:
+ type: BlogPosting
+
 ---
 
 ![Alt text for image](http://via.placeholder.com/1360x640 "Image Title Text 1")

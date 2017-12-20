@@ -53,7 +53,7 @@ permalink: /docs/
       {% for item in docs %}
         {% if item.name %}
       <div class="col-sm-3">
-        <a href="{{ item.url | relative_url }}" class="block">
+        <a href="{{ item.url | absolute_url }}" class="block">
           <div class="feature boxed boxed--border border--round text-center">
             <i class="icon--lg {{ item.icon }}"></i>
             <span class="h4 color--primary">{{ item.atitle }}</span>

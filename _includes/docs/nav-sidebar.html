@@ -6,7 +6,7 @@
     <div class="text-block">
       <ul class="menu-vertical">
         <li>
-          <a href="/docs">
+          <a href='{{ "/docs" | absolute_url }}'>
           <i class="icon-Home icon icon--xs"></i>
           Docs Home</a>
         </li>
@@ -24,7 +24,7 @@
 
                 {% for item in user-guides %}
                 <li>
-                  <a href="{{ item.url | relative_url }}">
+                  <a href="{{ item.url | absolute_url }}">
                     {{ item.atitle }}
                   </a>
                 </li>
@@ -36,7 +36,7 @@
 
                 {% for item in developer-guides %}
                 <li>
-                  <a href="{{ item.url | relative_url }}">
+                  <a href="{{ item.url | absolute_url }}">
                     {{ item.atitle }}
                   </a>
                 </li>
@@ -48,7 +48,7 @@
 
                 {% for item in framework-apis %}
                 <li>
-                  <a href="{{ item.url | relative_url }}">
+                  <a href="{{ item.url | absolute_url }}">
                     {{ item.atitle }}
                   </a>
                 </li>
@@ -60,7 +60,7 @@
 
                 {% for item in tutorials %}
                 <li>
-                  <a href="{{ item.url | relative_url }}">
+                  <a href="{{ item.url | absolute_url }}">
                     {{ item.atitle }}
                   </a>
                 </li>

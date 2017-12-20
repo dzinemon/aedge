@@ -35,6 +35,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-seo-tag
 
 
 
@@ -53,6 +54,31 @@ plugins:
 livereload: true
 
 permalink: pretty
+
+#Jekyll SEO Tag
+
+#facebook:
+# app_id: 1234
+# publisher: 1234
+# admins: 1234
+
+social:
+  name: Kevin Gallerin
+  links:
+    - https://twitter.com/BenBalter
+    - https://www.facebook.com/ben.balter
+    - https://www.linkedin.com/in/BenBalter
+    - https://plus.google.com/+BenBalter
+    - https://github.com/benbalter
+    - https://keybase.io/benbalter
+
+logo: URL to a site-wide logo (e.g., /assets/your-company-logo.png)
+
+webmaster_verifications:
+  google: 1234
+  bing: 1234
+  alexa: 1234
+  yandex: 1234
 
 #Pagination settings
 

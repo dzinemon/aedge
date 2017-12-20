@@ -14,7 +14,7 @@ layout: docs
   <div class="col-sm-12">
     <ol class="breadcrumbs">
       <li>
-        <a href="/docs">Documentation</a>
+        <a href='{{ "/docs" | absolute_url }}'>Documentation</a>
       </li>
       <li>{{ page.atitle }}</li>
     </ol>
@@ -27,10 +27,10 @@ layout: docs
   <div class="col-sm-12">
     <ol class="breadcrumbs">
       <li>
-        <a href="/docs">Documentation</a>
+        <a href='{{ "/docs" | absolute_url }}'>Documentation</a>
       </li>
       <li>
-        <a href="/docs/{{ page.category }}/">{{ page.category | replace: '-', ' ' | capitalize }}</a>
+        <a href="{{ site.url }}/docs/{{ page.category }}/">{{ page.category | replace: '-', ' ' | capitalize }}</a>
       </li>
       <li>{{ page.atitle }}</li>
     </ol>

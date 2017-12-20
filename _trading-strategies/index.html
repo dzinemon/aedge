@@ -25,7 +25,7 @@ subtitle: "Whether you’re building a welcome mat for your SaaS or a clean, cor
             <p>
               {{ item.subtitle }}
             </p>
-            <a href="{{ item.url | relative_url }}">
+            <a href="{{ item.url | absolute_url }}">
                 Learn more
             </a>
             {% if item.label == 'hot'%}
