@@ -11,15 +11,15 @@
 
       <div class="col-sm-6 col-md-4">
         <article class="feature feature-1">
-          <a href="{{ post.url }}" class="block">
+          <a href="{{ post.url | relative_url }}" class="block">
             <img alt="Image" src="{{ post.img }}">
           </a>
           <div class="feature__body boxed boxed--border">
             <span>{{ post.date | date: '%b %d, %Y' }}</span>
             <h5>{{ post.headline }}</h5>
-            <a href="{{ post.url }}">
-                      Read More
-                    </a>
+            <a href="{{ post.url | relative_url }}">
+              Read More
+            </a>
           </div>
         </article>
       </div>

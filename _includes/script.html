@@ -1,22 +1,30 @@
-<script src="/assets/js/jquery-3.1.1.min.js"></script>
-<script src="/assets/js/flickity.min.js"></script>
-<script src="/assets/js/easypiechart.min.js"></script>
-<script src="/assets/js/parallax.js"></script>
-<script src="/assets/js/typed.min.js"></script>
-<script src="/assets/js/datepicker.js"></script>
-<script src="/assets/js/isotope.min.js"></script>
-<script src="/assets/js/ytplayer.min.js"></script>
-<script src="/assets/js/lightbox.min.js"></script>
-<script src="/assets/js/granim.min.js"></script>
-<script src="/assets/js/jquery.steps.min.js"></script>
-<script src="/assets/js/countdown.min.js"></script>
-<script src="/assets/js/twitterfetcher.min.js"></script>
-<script src="/assets/js/spectragram.min.js"></script>
-<script src="/assets/js/smooth-scroll.min.js"></script>
-<script src="/assets/js/scripts.js"></script>
+<script src='{{"/assets/js/jquery-3.1.1.min.js" | relative_url }}'></script>
+<script src='{{"/assets/js/flickity.min.js" | relative_url }}'></script>
+<script src='{{"/assets/js/easypiechart.min.js" | relative_url }}'></script>
+<script src='{{"/assets/js/parallax.js" | relative_url }}'></script>
+<script src='{{"/assets/js/typed.min.js" | relative_url }}'></script>
+<script src='{{"/assets/js/datepicker.js" | relative_url }}'></script>
+<script src='{{"/assets/js/isotope.min.js" | relative_url }}'></script>
+<script src='{{"/assets/js/ytplayer.min.js" | relative_url }}'></script>
+<script src='{{"/assets/js/lightbox.min.js" | relative_url }}'></script>
+<script src='{{"/assets/js/granim.min.js" | relative_url }}'></script>
+<script src='{{"/assets/js/jquery.steps.min.js" | relative_url }}'></script>
+<script src='{{"/assets/js/countdown.min.js" | relative_url }}'></script>
+<script src='{{"/assets/js/twitterfetcher.min.js" | relative_url }}'></script>
+<script src='{{"/assets/js/spectragram.min.js" | relative_url }}'></script>
+<script src='{{"/assets/js/smooth-scroll.min.js" | relative_url }}'></script>
+<script src='{{"/assets/js/scripts.js" | relative_url }}'></script>
 
 {% if page.math == true %}
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 {% endif %}
+
+{% if page.url contains "search" %}
+<!--
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="/assets/js/search.js"></script>
+-->
+{% endif %}
+

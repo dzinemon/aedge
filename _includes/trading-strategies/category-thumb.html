@@ -7,7 +7,7 @@
       <p>
         {{ item.subtitle }}
       </p>
-      <a href="{{ item.url }}">Learn More</a>
+      <a href="{{ item.url | relative_url }}">Learn More</a>
       {% if item.label == 'hot'%}
       <span class="label">Hot</span>
       {% endif %}

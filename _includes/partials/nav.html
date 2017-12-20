@@ -45,7 +45,7 @@
 
                         {% for item in solutions %}
                           <li>
-                            <a href="{{ item.url }}">
+                            <a href="{{ item.url | relative_url }}">
                               {{ item.atitle }}
                             </a>
                           </li>
@@ -71,7 +71,7 @@
                         {% for item in strategies %}
                         {% if item.name %}
                           <li>
-                            <a href="{{ item.url }}">
+                            <a href="{{ item.url | relative_url }}">
                               {{ item.atitle }}
                             </a>
                           </li>
@@ -107,7 +107,7 @@
                             {% if item.name %}
 
                           <li>
-                            <a href="{{ item.url }}">
+                            <a href="{{ item.url | relative_url }}">
                               {{ item.atitle }}
                             </a>
                           </li>

@@ -30,6 +30,8 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.1)
       sass (~> 3.4)
+    jekyll-seo-tag (2.4.0)
+      jekyll (~> 3.3)
     jekyll-watch (1.5.1)
       listen (~> 3.0)
     kramdown (1.16.2)
@@ -39,7 +41,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     mercenary (0.3.6)
-    pathutil (0.16.0)
+    pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.1)
     rb-fsevent (0.10.2)
@@ -48,7 +50,7 @@ GEM
     rouge (1.11.1)
     ruby_dep (1.5.0)
     safe_yaml (1.0.4)
-    sass (3.5.3)
+    sass (3.5.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -62,6 +64,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-livereload
   jekyll-paginate
+  jekyll-seo-tag
 
 BUNDLED WITH
    1.16.0
