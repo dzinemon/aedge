@@ -2,26 +2,38 @@
 layout: default
 ---
 
-
-<section>
-  <div class="container">
-    <div class="row">
-    {% for post in site.categories[page.category] %}
-      <div class=" col-md-4 col-sm-6">
-        <article class="feature feature-1">
-          <a href="{{ post.url | absolute_url }}" class="block">
+<div class="main-container">
+  <section class="space--sm">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-8">
+          <div class="row">
+            {% for post in site.categories[page.category] %}
+            <div class="col-sm-6">
+              <article class="feature feature-1">
+                <a href="{{ post.url | absolute_url }}" class="block">
             <img alt="Image" src="{{ post.img }}">
           </a>
-          <div class="feature__body boxed boxed--border">
-            <span>{{ post.date | date: '%b %d, %Y' }}</span>
-            <h5>{{ post.headline }}</h5>
-            <a href="{{ post.url | absolute_url }}">
+                <div class="feature__body boxed boxed--border">
+                  <span>{{ post.date | date: '%b %d, %Y' }}</span>
+                  <h5>{{ post.headline }}</h5>
+                  <a href="{{ post.url | absolute_url }}">
               Read More
             </a>
+                </div>
+              </article>
+            </div>
+            {% endfor %}
           </div>
-        </article>
+          <!--end row-->
+
+          <!--end masonry-->
+        </div>
+        {% include blog/sidebar.html %}
       </div>
-    {% endfor %}
+      <!--end of row-->
     </div>
-  </div>
-</section>
+    <!--end of container-->
+  </section>
+
+</div>
