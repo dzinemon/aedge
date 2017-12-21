@@ -7,13 +7,13 @@ date:   2017-11-17 16:16:01 -0600
 categories: volatility
 strategy: volatility
 tags: products trends
-permalink: /:categories/blog/:title
+permalink: /blog/:title
 
 img: http://via.placeholder.com/360x240
 
 seo:
  type: BlogPosting
- 
+
 ---
 
 

@@ -1,5 +1,5 @@
 <div class="col-md-4 hidden-sm">
-  <div class="sidebar boxed boxed--border boxed--lg bg--secondary">
+  <div class="{% unless page.layout == 'category' %}sidebar{% endunless %} boxed boxed--border boxed--lg bg--secondary">
     <div class="sidebar__widget">
       <h5>Search Blog</h5>
       <form action="/search.html" method="get">
@@ -14,32 +14,18 @@
       </p>
     </div>
     <!--end widget-->
-    <div class="sidebar__widget">
-      <h5>Tags</h5>
-      <ul class="tag-cloud">
 
-      {% for tag in site.tags %}
-        <li>
-            <a href="{{ site.url }}/tag/{{ tag | first | slugize | }}/" class="text-capitalize">
-              {{ tag | first }} ({{ tag[1].size }})
-            </a>
-        </li>
-      {% endfor %}
-
-      </ul>
-    </div>
-    <!--end widget-->
     <div class="sidebar__widget">
       <h5>Categories</h5>
       <ul>
         {% assign categories_list = site.categories %}
         {% if categories_list.first[0] == null %}
           {% for category in categories_list %}
-            <li><a href="{{ site.url }}/category/{{ category }}">{{ category | capitalize }} ({{ site.tags[category].size }})</a></li>
+            <li><a href="{{ site.url }}/blog/{{ category }}">{{ category | capitalize }} ({{ site.tags[category].size }})</a></li>
           {% endfor %}
         {% else %}
           {% for category in categories_list %}
-            <li><a href="{{ site.url }}/category/{{ category[0] }}">{{ category[0] | capitalize }} ({{ category[1].size }})</a></li>
+            <li><a href="{{ site.url }}/blog/{{ category[0] }}">{{ category[0] | capitalize }} ({{ category[1].size }})</a></li>
           {% endfor %}
         {% endif %}
       {% assign categories_list = nil %}

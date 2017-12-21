@@ -7,7 +7,7 @@ headline: First day in the life of a professional AlphaEdge blogger
 categories: momentum
 strategy: momentum
 tags: products
-permalink: /:categories/blog/:title
+permalink: /blog/:title
 
 img: http://via.placeholder.com/360x240
 

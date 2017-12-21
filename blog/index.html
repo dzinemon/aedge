@@ -6,7 +6,7 @@ subtitle: AlphaEdge Blog about strading solutions and strategies
 
 ---
 
- <div class="main-container">
+<div class="main-container">
   <section class="space--sm">
     <div class="container">
       <div class="row">
@@ -22,7 +22,6 @@ subtitle: AlphaEdge Blog about strading solutions and strategies
             <div class="row">
               <div class="masonry__container">
                 {% for post in paginator.posts %}
-
 
                 <!--end item-->
                 <div class="masonry__item col-sm-6" data-masonry-filter="{{ post.strategy | replace: '-', ' '| capitalize }}">
@@ -47,34 +46,28 @@ subtitle: AlphaEdge Blog about strading solutions and strategies
             </div>
             <!--end row-->
             {% if paginator.total_pages > 1 %}
-              <div class="pagination">
-                {% if paginator.previous_page %}
-                  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination__prev" title="Previous Page">&laquo;</a>
+            <div class="pagination">
+              {% if paginator.previous_page %}
+              <a href="{{ paginator.previous_page_path | prepend: site.url  }}" class="pagination__prev" title="Previous Page">&laquo;</a> {% else %}
+              <span class="pagination__prev">&laquo;</span> {% endif %}
+              <ol>
+                {% for page in (1..paginator.total_pages) %} {% if page == paginator.page %}
+                <li class="pagination__current">{{ page }}</li>
+                {% elsif page == 1 %}
+                <li>
+                  <a href="{{ paginator.previous_page_path | prepend: site.url  }}">{{ page }}</a>
+                </li>
                 {% else %}
-                  <span class="pagination__prev">&laquo;</span>
-                {% endif %}
-                <ol>
-                {% for page in (1..paginator.total_pages) %}
-                  {% if page == paginator.page %}
-                    <li class="pagination__current">{{ page }}</li>
-                  {% elsif page == 1 %}
-                    <li>
-                      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-                    </li>
-                  {% else %}
-                    <li>
-                      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-                    </li>
-                  {% endif %}
-                {% endfor %}
-                </ol>
-                {% if paginator.next_page %}
-                  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination__next" title="Next Page">&raquo;</a>
-                {% else %}
-                  <span class="pagination__next">&raquo;</span>
-                {% endif %}
-              </div>
-              {% endif %}
+                <li>
+                  <a href="{{ site.paginate_path | prepend: site.url  | replace: ':num', page }}">{{ page }}</a>
+                </li>
+                {% endif %} {% endfor %}
+              </ol>
+              {% if paginator.next_page %}
+              <a href="{{ paginator.next_page_path | prepend: site.url  }}" class="pagination__next" title="Next Page">&raquo;</a> {% else %}
+              <span class="pagination__next">&raquo;</span> {% endif %}
+            </div>
+            {% endif %}
           </div>
           <!--end masonry-->
         </div>
