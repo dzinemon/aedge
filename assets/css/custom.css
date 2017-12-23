@@ -1,1 +1,8 @@
 /*! Place your custom styles here */
+.dropdown .dropdown__content.bordered {
+  border-radius: 0;
+}
+
+.bordered {
+  border-left: 3px solid #ececed;
+}

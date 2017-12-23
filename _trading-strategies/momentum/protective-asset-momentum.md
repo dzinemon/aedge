@@ -4,6 +4,13 @@ layout: strategy-item
 atitle: Momentum Item 3 Protective asset momentum 
 subtitle: Momentum Item 3 Protective asset momentum Super awesome subtitle
 
+title: AlphaEdge Mean Reversion Item Demo title  page
+
+description: AlphaEdge | Mean Reversion Item Demo title  page - Description 160-260 chars
+
+seo:
+  type: Article
+
 category: momentum
 icon: icon-Cinema
 

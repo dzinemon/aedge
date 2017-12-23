@@ -70,5 +70,5 @@ source - This [blog post](https://kramdown.gettalong.org/quickref.html)
    - Community Forum
    - Contact Support
 5. Blog
-   - Posts (strategies/blog/doc)
+   - Posts (blog/post-title)
   

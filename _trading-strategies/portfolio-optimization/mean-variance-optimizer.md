@@ -4,6 +4,13 @@ layout: strategy-item
 atitle: portfolio-optimization Item 3 Demo title 
 subtitle: portfolio-optimization Item 3 Super awesome subtitle
 
+title: AlphaEdge Mean Reversion Item Demo title  page
+
+description: AlphaEdge | Mean Reversion Item Demo title  page - Description 160-260 chars
+
+seo:
+  type: Article
+
 category: portfolio-optimization
 icon: icon-City-Hall
 

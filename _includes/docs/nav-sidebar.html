@@ -1,5 +1,5 @@
 <div class="nav-container nav-container--sidebar">
-  <div class="nav-sidebar-column bg--secondary">
+  <div class="nav-sidebar-column bg--white">
     <div class="text-center text-block">
     </div>
     <hr>
@@ -7,8 +7,8 @@
       <ul class="menu-vertical">
         <li>
           <a href='{{ "/docs" | absolute_url }}'>
-          <i class="icon-Home icon icon--xs"></i>
-          Docs Home</a>
+<!--          <i class="icon-Home icon icon--xs"></i>-->
+          <strong>Docs Home</strong></a>
         </li>
         {% assign docs = site.docs | sort: 'order' %}
 
@@ -17,7 +17,7 @@
         <li class="dropdown {% if page.url contains item.name %}dropdown--active{% endif %}">
           <span class="dropdown__trigger">{{ item.atitle }}</span>
           <div class="dropdown__container">
-            <div class="dropdown__content">
+            <div class="dropdown__content bordered">
               <ul class="menu-vertical">
               {% if item.name == "user-guide" %}
                 {% assign user-guides = site.docs | where:"category","user-guide" %}

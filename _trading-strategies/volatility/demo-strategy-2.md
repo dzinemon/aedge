@@ -4,6 +4,13 @@ layout: strategy-item
 atitle: Volatility Item 2 Demo title 
 subtitle: Volatility Item 2 Super awesome subtitle
 
+title: AlphaEdge Mean Reversion Item Demo title  page
+
+description: AlphaEdge | Mean Reversion Item Demo title  page - Description 160-260 chars
+
+seo:
+  type: Article
+
 category: volatility
 icon: icon-Chemical-2
 ---

@@ -4,6 +4,13 @@ layout: strategy-item
 atitle: Mean Reversion Item Demo title 
 subtitle: Mean Reversion Item Super awesome subtitle
 
+title: AlphaEdge Mean Reversion Item Demo title  page
+
+description: AlphaEdge | Mean Reversion Item Demo title  page - Description 160-260 chars
+
+seo:
+  type: Article
+
 category: mean-reversion
 icon: icon-Chemical-5
 ---

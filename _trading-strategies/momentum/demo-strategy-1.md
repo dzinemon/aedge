@@ -4,6 +4,13 @@ layout: strategy-item
 atitle: Momentum Item Demo title 
 subtitle: Momentum Item Super awesome subtitle
 
+title: AlphaEdge Mean Reversion Item Demo title  page
+
+description: AlphaEdge | Mean Reversion Item Demo title  page - Description 160-260 chars
+
+seo:
+  type: Article
+
 category: momentum
 icon: icon-Chip
 ---

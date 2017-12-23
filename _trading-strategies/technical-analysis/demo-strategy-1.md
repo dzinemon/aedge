@@ -4,6 +4,13 @@ layout: strategy-item
 atitle: technical-analysis Item Demo title 
 subtitle: technical-analysis Item Super awesome subtitle
 
+title: AlphaEdge Mean Reversion Item Demo title  page
+
+description: AlphaEdge | Mean Reversion Item Demo title  page - Description 160-260 chars
+
+seo:
+  type: Article
+
 category: technical-analysis
 icon: icon-Cap
 ---

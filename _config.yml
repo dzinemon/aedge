@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Alphaedge website
+#title: Alphaedge website
 email: hello@alphaedge.io
 phone: "+613 4827 2294"
 madein: Country name
@@ -57,13 +57,22 @@ permalink: pretty
 
 #Jekyll SEO Tag
 
+## Structured data
+### Blog Item
+#title - The title of the post, page, or document
+#description - A short description of the page's content
+#image - URL to an image associated with the post, page, or document (e.g., /assets/page-pic.jpg)
+#author - Page-, post-, or document-specific author information (see below)
+#lang - Page-, post-, or document-specific language information
+
+
 #facebook:
 # app_id: 1234
 # publisher: 1234
 # admins: 1234
 
 social:
-  name: Kevin Gallerin
+  name: AlphaEdge
   links:
     - https://twitter.com/BenBalter
     - https://www.facebook.com/ben.balter
@@ -72,7 +81,9 @@ social:
     - https://github.com/benbalter
     - https://keybase.io/benbalter
 
-logo: URL to a site-wide logo (e.g., /assets/your-company-logo.png)
+logo: http://via.placeholder.com/60x60
+
+#publisher: AlphaEdge
 
 webmaster_verifications:
   google: 1234

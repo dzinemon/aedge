@@ -3,10 +3,17 @@ layout: docs
 
 permalink: /docs/
 
+title: AlphaEdge Docs page
+
+description: AlphaEdge | Docs page - Description 160-260 chars
+
+seo:
+  type: WebPage
+
 ---
 
 
-<section class="imagebg image--light cover cover-blocks bg--primary">
+<section class="imagebg image--light cover cover-blocks bg--secondary space--xs">
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-lg-6 col-md-offset-1">
@@ -25,12 +32,6 @@ permalink: /docs/
               </div>
             </form>
           </div>
-          <hr class="short">
-          <p>
-            Explore all of Stack's modular elements
-            <br /> at the
-            <a href="elements.html">Element Index Page &rarr;</a>
-          </p>
         </div>
       </div>
     </div>
@@ -40,7 +41,7 @@ permalink: /docs/
 </section>
 
 
-<section>
+<section class="space--xs">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -52,11 +53,12 @@ permalink: /docs/
 
       {% for item in docs %}
         {% if item.name %}
+
       <div class="col-sm-3">
         <a href="{{ item.url | absolute_url }}" class="block">
           <div class="feature boxed boxed--border border--round text-center">
-            <i class="icon--lg {{ item.icon }}"></i>
-            <span class="h4 color--primary">{{ item.atitle }}</span>
+            <i class="color--primary icon--lg {{ item.icon }}"></i>
+            <h4 class="h4 color--primary">{{ item.atitle }}</h4>
           </div>
         </a>
       </div>
@@ -66,41 +68,4 @@ permalink: /docs/
     </div>
     <!--end of row-->
   </div>
-</section>
-
-
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-8 col-md-offset-2">
-        <div class="boxed bg--secondary boxed--lg boxed--border">
-          <h4>Sidebar Column Markup</h4>
-          <p>
-            As with all other navigation types in Stack, the sidebar column element should reside inside the
-            <strong>.nav-container</strong> element, with the additional class
-            <strong>.nav-container--sidebar</strong> being required to correctly disperse the space on the page.
-          </p>
-          <p>
-            The sidebar column navigation itself should have the class
-            <strong>.nav-sidebar-column</strong> and can be filled out with whatever content is required. Proceeding the nav-sidebar-column is the
-            <strong>.nav-sidebar-column-toggle</strong> which allows the sidebar navigation to be shown on smaller screen sizes.
-          </p>
-          <p>
-            The markup snippet below is all that's required to set up a sidebar column navigation on the page (the contents of the sidebar is represented by '...':
-          </p>
-        {% highlight html %}
-          <div class="container">
-            <div class="row ">
-              <div class="col-md-6">
-                <h3>'...'</h3>
-              </div>
-            </div>
-          </div>
-       {% endhighlight %}
-        </div>
-      </div>
-    </div>
-    <!--end of row-->
-  </div>
-  <!--end of container-->
 </section>
