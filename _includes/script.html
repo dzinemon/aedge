@@ -22,9 +22,7 @@
 {% endif %}
 
 {% if page.url contains "search" %}
-<!--
-<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src='{{ "/assets/js/lunr.js" | absolute_url }}'></script>
 <script src='{{ "/assets/js/search.js" | absolute_url }}'></script>
--->
 {% endif %}
 
