@@ -4,6 +4,13 @@ layout: docs-item
 atitle: Framework Guide 
 subtitle: Framework Guide awesome subtitle
 
+title: AlphaEdge Framework Guide page
+
+description: AlphaEdge | Framework Guide page - Description 160-260 chars
+
+seo:
+  type: WebPage
+
 category: framework-api
 icon: icon-Helmet-3
 math: true

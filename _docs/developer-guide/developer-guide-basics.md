@@ -4,6 +4,13 @@ layout: docs-item
 atitle: Developer Guide basics - Guide 
 subtitle: Developer Guide basics - Guide awesome subtitle
 
+title: AlphaEdge Developer Guide basics page
+
+description: AlphaEdge | Developer Guide basics page - Description 160-260 chars
+
+seo:
+  type: WebPage
+
 category: developer-guide
 icon: icon-Helmet-3
 math: true

@@ -5,6 +5,13 @@ atitle: Developer Guide
 subtitle: "Welcome to the AlphaEdge Developer Guide tutorials site. You'll find comprehensive guides, documentation, and our tutorials to help you start working with it as quickly as possible, as well as support if you get stuck. Let's jump right in!
 "
 
+title: AlphaEdge Developer Guide page
+
+description: AlphaEdge | Developer Guide page - Description 160-260 chars
+
+seo:
+  type: WebPage
+
 name: developer-guide
 order: 2
 permalink: /:collection/developer-guide/

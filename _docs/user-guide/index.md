@@ -5,6 +5,13 @@ atitle: User Guide
 subtitle: "Welcome to the AlphaEdge documentation site. You'll find comprehensive guides, documentation, and our tutorials to help you start working with it as quickly as possible, as well as support if you get stuck. Let's jump right in!
 "
 
+title: AlphaEdge User Guide page
+
+description: AlphaEdge | User Guide page - Description 160-260 chars
+
+seo:
+  type: WebPagew
+
 name: user-guide
 order: 1
 permalink: /:collection/user-guide/

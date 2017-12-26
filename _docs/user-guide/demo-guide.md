@@ -4,6 +4,13 @@ layout: docs-item
 atitle: Demo Guide 
 subtitle: Demo Guide awesome subtitle
 
+title: AlphaEdge Demo Guide page
+
+description: AlphaEdge | Demo Guide page - Description 160-260 chars
+
+seo:
+  type: WebPage
+
 category: user-guide
 icon: icon-Helmet-1
 math: true

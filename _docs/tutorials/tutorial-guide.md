@@ -4,6 +4,13 @@ layout: docs-item
 atitle: Tutorial Guide 
 subtitle: Tutorial Guide awesome subtitle
 
+title: AlphaEdge Tutorial Guide page
+
+description: AlphaEdge | Tutorial Guide page - Description 160-260 chars
+
+seo:
+  type: WebPage
+
 category: tutorials
 icon: icon-Helmet-1
 math: true

@@ -5,6 +5,13 @@ atitle: Tutorials
 subtitle: "Welcome to the AlphaEdge Tutorialstutorials site. You'll find comprehensive guides, documentation, and our tutorials to help you start working with it as quickly as possible, as well as support if you get stuck. Let's jump right in!
 "
 
+title: AlphaEdge Tutorials page
+
+description: AlphaEdge | Tutorials page - Description 160-260 chars
+
+seo:
+  type: WebPage
+
 name: tutorials
 order: 4
 permalink: /:collection/tutorials/

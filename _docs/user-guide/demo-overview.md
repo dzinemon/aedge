@@ -4,6 +4,13 @@ layout: docs-item
 atitle: Overview 
 subtitle: Overview awesome subtitle
 
+title: AlphaEdge Overview page
+
+description: AlphaEdge | Overview page - Description 160-260 chars
+
+seo:
+  type: WebPagew
+
 category: user-guide
 icon: icon-Target
 math: true

@@ -5,6 +5,13 @@ atitle: Framework-Api
 subtitle: "Welcome to the AlphaEdge Framework-API tutorials site. You'll find comprehensive guides, documentation, and our tutorials to help you start working with it as quickly as possible, as well as support if you get stuck. Let's jump right in!
 "
 
+title: AlphaEdge Framework-Api page
+
+description: AlphaEdge | Framework-Api page - Description 160-260 chars
+
+seo:
+  type: WebPage
+
 name: framework-api
 order: 3
 permalink: /:collection/framework-api/
