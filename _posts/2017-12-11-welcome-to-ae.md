@@ -1,6 +1,8 @@
 ---
 layout: post
-title:  "Welcome to AlphaEdge Jekyll!"
+
+author: "AlphaEdge Author"
+
 date:   2017-12-09 01:56:55 +0200
 
 headline: First day in the life of a professional AlphaEdge blogger
@@ -10,6 +12,10 @@ tags: products
 permalink: /blog/:title
 
 img: http://via.placeholder.com/360x240
+
+title:  "Welcome to AlphaEdge Jekyll!"
+
+description: "Description for Welcome to AlphaEdge Jekyll!"
 
 seo:
  type: BlogPosting
