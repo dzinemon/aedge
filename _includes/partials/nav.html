@@ -41,7 +41,7 @@
                     <div class="row">
                       <div class="dropdown__content col-md-2 col-sm-4">
                         <ul class="menu-vertical">
-                        {% assign solutions = site.trading-software-solutions | where:"category","trading-software-solutions" %}
+                        {% assign solutions = site.trading-software-solutions | where:"category","trading-software-solutions" | sort: "order" %}
 
                         {% for item in solutions %}
                           <li>
@@ -66,7 +66,7 @@
                     <div class="row">
                       <div class="dropdown__content col-md-2 col-sm-4">
                         <ul class="menu-vertical">
-                        {% assign strategies = site.trading-strategies %}
+                        {% assign strategies = site.trading-strategies | sort: "order" %}
 
                         {% for item in strategies %}
                         {% if item.name %}

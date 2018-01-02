@@ -109,3 +109,6 @@ collections:
   docs:
     output: true
     permalink: /:collection/:categories/:name
+
+#Styling options
+# _data/spacing.yml

@@ -16,12 +16,12 @@ seo:
 
 {% include trading-solutions/solutions-crumbs.html %}
 
-{% assign solutions = site.trading-software-solutions | where:"category","trading-software-solutions" %}
+{% assign solutions = site.trading-software-solutions | where:"category","trading-software-solutions" | sort:"order" %}
 
 {% for item in solutions %}
 
 
-<section class="switchable feature-large bg--secondary space--sm">
+<section class="switchable feature-large bg--secondary {{ site.data.spacing.spacing-class }}">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">

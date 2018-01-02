@@ -16,32 +16,16 @@ seo:
 ---
 
 
-<section class="bg--secondary unpad">
- {% include trading-strategies/strategies-crumbs.html %}
+{% include trading-strategies/strategies-crumbs.html %}
+
+<section class="bg--secondary {{ site.data.spacing.spacing-class }}">
   <div class="container">
     <div class="row">
-      {% assign strategies = site.trading-strategies %}
+      {% assign strategies = site.trading-strategies | sort: "order" %}
 
       {% for item in strategies %}
       {% if item.name %}
-      <div class="col-sm-6">
-        <div class="feature feature-2 feature--featured boxed boxed--border">
-          <i class="icon  icon--lg {{ item.icon }} color--primary"></i>
-          <div class="feature__body">
-            <h5>{{ item.atitle }}</h5>
-            <p>
-              {{ item.subtitle }}
-            </p>
-            <a href="{{ item.url | absolute_url }}">
-                Learn more
-            </a>
-            {% if item.label == 'hot'%}
-            <span class="label">Hot</span>
-            {% endif %}
-          </div>
-        </div>
-        <!--end feature-->
-      </div>
+        {% include trading-strategies/category-thumb.html %}
       {% endif %}
       {% endfor %}
     </div>

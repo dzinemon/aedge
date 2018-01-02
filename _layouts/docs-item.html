@@ -10,38 +10,46 @@ layout: docs
 
   {% if page.name %}
 
+<section class="unpad bg--primary-1">
   <div class="container">
-  <div class="col-sm-12">
-    <ol class="breadcrumbs">
-      <li>
-        <a href='{{ "/docs" | absolute_url }}'>Documentation</a>
-      </li>
-      <li>{{ page.atitle }}</li>
-    </ol>
+    <div class="row">
+      <div class="col-sm-12">
+        <ul class="breadcrumbs pull-right">
+          <li>
+            <a href='{{ "/docs" | absolute_url }}'>Documentation</a>
+          </li>
+          <li>{{ page.atitle }}</li>
+        </ul>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 
   {% else %}
+<section class="unpad bg--primary-1">
   <div class="container">
-  <div class="col-sm-12">
-    <ol class="breadcrumbs">
-      <li>
-        <a href='{{ "/docs" | absolute_url }}'>Documentation</a>
-      </li>
-      <li>
-        <a href="{{ site.url }}/docs/{{ page.category }}/">{{ page.category | replace: '-', ' ' | capitalize }}</a>
-      </li>
-      <li>{{ page.atitle }}</li>
-    </ol>
+    <div class="row">
+      <div class="col-sm-12">
+        <ul class="breadcrumbs pull-right">
+          <li>
+            <a href='{{ "/docs" | absolute_url }}'>Documentation</a>
+          </li>
+          <li>
+            <a href="{{ site.url }}/docs/{{ page.category }}/">{{ page.category | replace: '-', ' ' | capitalize }}</a>
+          </li>
+          <li>{{ page.atitle }}</li>
+        </ul>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 
   {% endif %}
 
 
-<section class="unpad">
+<section class="{{ site.data.spacing.spacing-class }}">
   <div class="container">
     <div class="col-sm-12">
       {{ content }}

@@ -17,31 +17,29 @@
 
   {% include trading-strategies/strategy-item-crumbs.html %}
 
-    <section class="unpad">
+    <section class="{{ site.data.spacing.spacing-class }}">
       <div class="container">
         <div class="row">
           <div class="col-md-9 col-md-push-3 col-sm-12">
             <article class="mb--3">
-              <div class="article__title text-center">
-                <h2>{{ page.atitle }}</h2>
-                <span>{% if page.date %}{{ page.date | date: '%B %d, %Y' }}{% else %}{{ site.time | date: '%B %d, %Y' }}{% endif %}</span>
-                <span>
-                  <a href="/trading-stratefies/{{ page.strategy }}">{{ page.strategy | replace: '-', ' ' | capitalize }}</a>
-                </span>
-              </div>
+
               <div class="article__body">
                 {{ content }}
               </div>
             </article>
           </div>
           <div class="col-md-3 col-md-pull-9 col-sm-6">
-        <div class="sidebar boxed boxed--border boxed--lg bg--secondary">
+        <div class="boxed boxed--border bg--secondary {{ site.data.spacing.sidebar-spacing }}">
 
           <div class="sidebar__widget">
-            <h5>{{ page.category | replace: '-', ' ' | capitalize }} categories</h5>
-            <ul>
+            <h5 class="unmarg--bottom">
+              <a href="{{ site.url }}/trading-strategies/{{ page.category }}">
+                {{ page.category | replace: '-', ' ' | capitalize }} strategies
+              </a>
+            </h5>
+            <ul class="list-indent">
               {% if page.category == 'mean-reversion' %}
-                {% assign reversions = site.trading-strategies | where:"category","mean-reversion" %}
+                {% assign reversions = site.trading-strategies | where:"category","mean-reversion" | sort: 'title' %}
 
                 {% for item in reversions %}
                   {% unless item.url == page.url %}
@@ -54,7 +52,7 @@
 
               {% elsif page.category == 'technical-analysis' %}
 
-                {% assign analysys = site.trading-strategies | where:"category","technical-analysis" %}
+                {% assign analysys = site.trading-strategies | where:"category","technical-analysis" | sort: 'title' %}
 
                 {% for item in analysys %}
 
@@ -68,7 +66,7 @@
 
               {% elsif page.category == 'volatility' %}
 
-                {% assign volatilities = site.trading-strategies | where:"category","volatility" %}
+                {% assign volatilities = site.trading-strategies | where:"category","volatility" | sort: 'title' %}
 
                 {% for item in volatilities %}
 
@@ -82,7 +80,7 @@
 
               {% elsif page.category == 'momentum' %}
 
-                {% assign momentums = site.trading-strategies | where:"category","momentum" %}
+                {% assign momentums = site.trading-strategies | where:"category","momentum" | sort: 'title' %}
 
                 {% for item in momentums %}
 
@@ -96,7 +94,7 @@
 
               {% elsif page.category == 'portfolio-optimization' %}
 
-                {% assign optimizations = site.trading-strategies | where:"category","portfolio-optimization" %}
+                {% assign optimizations = site.trading-strategies | where:"category","portfolio-optimization" | sort: 'title' %}
 
                 {% for item in optimizations %}
 
@@ -111,11 +109,16 @@
               {% endif %}
 
             </ul>
+            <hr class="unmarg">
           </div>
 
           <div class="sidebar__widget">
-            <h5>All Strategies</h5>
-            <ul>
+            <h5 class="unmarg--bottom">
+              <a href="{{ site.url }}/trading-strategies">
+                All Strategies
+              </a>
+            </h5>
+            <ul class="list-indent">
             {% assign strategies = site.trading-strategies %}
 
             {% for item in strategies %}
@@ -129,6 +132,7 @@
             {% endfor %}
 
             </ul>
+            <hr class="unmarg">
           </div>
 
         </div>

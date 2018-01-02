@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{% include trading-strategies/strategies-cat-crumbs.html %}
+
+<section class="bg--secondary {{ site.data.spacing.spacing-class }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include trading-strategies/trading-strategies-loops.html %}

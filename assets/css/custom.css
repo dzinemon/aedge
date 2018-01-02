@@ -3,8 +3,12 @@
   border-radius: 0;
 }
 
-.bordered {
-  border-left: 3px solid #ececed;
+.menu-vertical li.dropdown:after {
+  color: #4a90e2;
+}
+
+.list-indent {
+  margin-left: 10px;
 }
 
 /*Menu item styling*/
@@ -28,3 +32,10 @@
 .dropdown .dropdown__content:not([class='bg--dark']) .menu-vertical a {
   color: #333333;
 }
+
+
+.menu-vertical > .dropdown > .dropdown__trigger,
+.nav-sidebar-column .dropdown .dropdown__content:not([class='bg--dark']) .menu-vertical a {
+  color: #4a90e2;
+}
+

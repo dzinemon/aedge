@@ -1,7 +1,7 @@
 ---
 layout: strategy-item
 
-atitle: portfolio-optimization Item 2 Demo title 
+atitle: Portfolio-optimization Item 2 Demo title 
 subtitle: portfolio-optimization Item 2 Super awesome subtitle
 
 title: AlphaEdge Mean Reversion Item Demo title  page

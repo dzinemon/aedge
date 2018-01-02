@@ -1,12 +1,14 @@
-<section class="unpad bg--secondary">
+<section class="unpad bg--primary-1">
   <div class="container">
-    <div class="col-sm-12">
-      <ol class="breadcrumbs">
-        <li>
-          <a href='{{ "/" | absolute_url }}'>Home</a>
-        </li>
-        <li>{{ page.atitle }}</li>
-      </ol>
+    <div class="row">
+      <div class="col-sm-12">
+        <ul class="breadcrumbs pull-right">
+          <li>
+            <a href='{{ "/" | absolute_url }}'>Home</a>
+          </li>
+          <li>{{ page.atitle }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
