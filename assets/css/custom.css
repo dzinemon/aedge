@@ -6,3 +6,25 @@
 .bordered {
   border-left: 3px solid #ececed;
 }
+
+/*Menu item styling*/
+.menu-horizontal > li:not(:hover) > a,
+.menu-horizontal > li:not(:hover) > span,
+.menu-horizontal > li:not(:hover) > .modal-instance > .modal-trigger {
+  opacity: .7;
+}
+
+.menu-horizontal > li > a,
+.menu-horizontal > li > span,
+.menu-horizontal > li > .modal-instance > .modal-trigger {
+  color: #252525;
+}
+.menu-horizontal > li > a:hover,
+.menu-horizontal > li > span:hover,
+.menu-horizontal > li > .modal-instance > .modal-trigger:hover {
+  color: #252525;
+}
+
+.dropdown .dropdown__content:not([class='bg--dark']) .menu-vertical a {
+  color: #333333;
+}
