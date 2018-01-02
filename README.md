@@ -72,3 +72,14 @@ source - This [blog post](https://kramdown.gettalong.org/quickref.html)
 5. Blog
    - Posts (blog/post-title)
   
+---
+
+### Spacing
+
+set class for spacing of the proper item in `_data/spacing.yml`
+```
+spacing-class: space--sm, space--lg etc.
+page-title-spacing-class: space--sm
+sidebar-spacing: '' - no class
+#page-title-spacing-class: boxed--sm, boxed--lg etc.
+```
