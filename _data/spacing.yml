@@ -1,4 +1,4 @@
 spacing-class: space--sm
 page-title-spacing-class: space--sm
-sidebar-spacing: ''
+sidebar-spacing: 'boxed--sm'
 #page-title-spacing-class: boxed--lg
