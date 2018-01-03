@@ -1,7 +1,7 @@
 ---
 layout: docs-item
 
-atitle: Developer Guide basics - Guide 
+atitle: Developer Guide basics
 subtitle: Developer Guide basics - Guide awesome subtitle
 
 title: AlphaEdge Developer Guide basics page

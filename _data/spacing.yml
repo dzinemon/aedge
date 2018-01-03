@@ -1,4 +1,9 @@
-spacing-class: space--sm
-page-title-spacing-class: space--sm
-sidebar-spacing: 'boxed--sm'
-#page-title-spacing-class: boxed--lg
+#Section and footer spacing
+spacing-class: 'space--sm'
+
+#Page title spacing - with a blue background white centered text
+page-title-spacing-class: 'space--sm'
+
+#Spacing for the sidebar - left on the blog or right in docs layouts
+sidebar-spacing: ''
+#sidebar-spacing: 'boxed--lg' 'boxed--sm'

@@ -8,6 +8,11 @@
           {{ page.subtitle }}
         </p>
         {% endif %}
+
+        {% if page.url == '/docs/'%}
+          {% include docs/docs-search.html %}
+        {% endif %}
+
       </div>
     </div>
     <!--end of row-->

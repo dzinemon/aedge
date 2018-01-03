@@ -1,7 +1,7 @@
 ---
 layout: docs-item
 
-atitle: Framework basics - Guide 
+atitle: Framework basics 
 subtitle: Framework basics - Guide awesome subtitle
 
 title: AlphaEdge Framework basics - Guide page
