@@ -1,17 +1,152 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
 
-{% include trading-strategies/strategies-cat-crumbs.html %}
+<head>
+  {% include head.html %}
+</head>
 
-<section class="bg--secondary {{ site.data.spacing.spacing-class }}">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        {{ content }}
+<body class=" ">
+  <a id="start"></a>
+  <!--end of notification-->
+  {% include partials/nav.html %}
+  <div class="main-container">
+  {% if page.atitle %}
+  {% include partials/page-title.html %}
+  {% endif %}
+
+  {% include trading-strategies/strategies-cat-crumbs.html %}
+
+    <section class="{{ site.data.spacing.spacing-class }}">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-md-push-3 col-sm-12">
+            <article class="mb--3">
+
+              <div class="article__body">
+                {{ content }}
+              </div>
+            </article>
+          </div>
+          <div class="col-md-3 col-md-pull-9 col-sm-6">
+            <div class="boxed boxed--border bg--secondary {{ site.data.spacing.sidebar-spacing }}">
+
+              <div class="sidebar__widget">
+                <h5 class="unmarg--bottom">
+                  <a href="{{ site.url }}/trading-strategies/{{ page.category }}">
+                    {{ page.atitle }} strategies
+                  </a>
+                </h5>
+                <ul class="list-indent">
+                  {% if page.url contains 'mean-reversion' %}
+                    {% assign reversions = site.trading-strategies | where:"category","mean-reversion" | sort: 'title' %}
+
+                    {% for item in reversions %}
+                      {% unless item.url == page.url %}
+                        <li>
+                          <a href="{{ item.url | absolute_url }}">{{ item.atitle }}</a>
+                        </li>
+                      {% endunless %}
+
+                    {% endfor %}
+
+                  {% elsif page.url contains 'technical-analysis' %}
+
+                    {% assign analysys = site.trading-strategies | where:"category","technical-analysis" | sort: 'title' %}
+
+                    {% for item in analysys %}
+
+                      {% unless item.url == page.url %}
+                        <li>
+                          <a href="{{ item.url | absolute_url }}">{{ item.atitle }}</a>
+                        </li>
+                      {% endunless %}
+
+                    {% endfor %}
+
+                  {% elsif page.url contains 'volatility' %}
+
+                    {% assign volatilities = site.trading-strategies | where:"category","volatility" | sort: 'title' %}
+
+                    {% for item in volatilities %}
+
+                      {% unless item.url == page.url %}
+                        <li>
+                          <a href="{{ item.url | absolute_url }}">{{ item.atitle }}</a>
+                        </li>
+                      {% endunless %}
+
+                    {% endfor %}
+
+                  {% elsif page.url contains 'momentum' %}
+
+                    {% assign momentums = site.trading-strategies | where:"category","momentum" | sort: 'title' %}
+
+                    {% for item in momentums %}
+
+                      {% unless item.url == page.url %}
+                        <li>
+                          <a href="{{ item.url | absolute_url }}">{{ item.atitle }}</a>
+                        </li>
+                      {% endunless %}
+
+                    {% endfor %}
+
+                  {% elsif page.url contains 'portfolio-optimization' %}
+
+                    {% assign optimizations = site.trading-strategies | where:"category","portfolio-optimization" | sort: 'title' %}
+
+                    {% for item in optimizations %}
+
+                      {% unless item.url == page.url %}
+                        <li>
+                          <a href="{{ item.url | absolute_url }}">{{ item.atitle }}</a>
+                        </li>
+                      {% endunless %}
+
+                    {% endfor %}
+
+                  {% endif %}
+
+                </ul>
+                <hr class="unmarg">
+              </div>
+
+              <div class="sidebar__widget">
+                <h5 class="unmarg--bottom">
+                  <a href="{{ site.url }}/trading-strategies">
+                    All Strategies
+                  </a>
+                </h5>
+                <ul class="list-indent">
+                {% assign strategies = site.trading-strategies %}
+
+                {% for item in strategies %}
+                {% if item.name %}
+                  <li>
+                    <a href="{{ item.url | absolute_url }}">
+                      {{ item.atitle }}
+                    </a>
+                  </li>
+                {% endif %}
+                {% endfor %}
+
+                </ul>
+                <hr class="unmarg">
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-{% include trading-strategies/trading-strategies-loops.html %}
+    {% include footer.html bg-class="bg--dark" %}
+  </div>
+  <!--<div class="loader"></div>-->
+  <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
+    <i class="stack-interface stack-up-open-big"></i>
+  </a>
+  {% include script.html %}
+</body>
+
+</html>
