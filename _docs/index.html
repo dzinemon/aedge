@@ -13,22 +13,22 @@ seo:
 ---
 
 
-<section class="imagebg image--light cover cover-blocks bg--secondary {{ site.data.spacing.spacing-class }}">
+<section class="imagebg image--light cover cover-blocks bg--primary-1 {{ site.data.spacing.spacing-class }}">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-lg-6 col-md-offset-1">
-        <div>
+      <div class="col-md-6 col-md-offset-3">
+        <div class="text-center">
           <h1>AlphaEdge Docs</h1>
           <p class="lead">
             Stack includes support for a sidebar column navigation the left, or right of the page
           </p>
-          <div class="text-left">
+          <div class="">
             <form class="form--horizontal">
-              <div class="col-sm-8">
+              <div class="col-sm-9">
                 <input type="text" name="search" placeholder="Type search keywords here">
               </div>
-              <div class="col-sm-4">
-                <button type="submit" class="btn btn--primary type--uppercase">Search</button>
+              <div class="col-sm-3">
+                <button type="submit" class="btn btn--primary btn--unfilled type--uppercase">Search</button>
               </div>
             </form>
           </div>
@@ -41,31 +41,98 @@ seo:
 </section>
 
 
-<section class="{{ site.data.spacing.spacing-class }}">
+<section class="{{ site.data.spacing.spacing-class }} unpad--bottom">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
-        <h2 class="">Getting Started With AlphaEdge</h2>
-      </div>
-    </div>
-    <div class="row">
-      {% assign docs = site.docs | sort: 'order' %}
+      <div class="col-md-9 col-md-push-3 col-sm-12">
+        <article class="mb--3">
 
-      {% for item in docs %}
-        {% if item.name %}
+          <div class="article__body">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="text-center">Getting Started With AlphaEdge</h2>
+              </div>
+            </div>
+            <div class="row">
+              {% assign docs = site.docs | sort: 'order' %} {% for item in docs %} {% if item.name %}
 
-      <div class="col-sm-3">
-        <a href="{{ item.url | absolute_url }}" class="block">
-          <div class="feature boxed boxed--border border--round text-center">
-            <i class="color--primary icon--lg {{ item.icon }}"></i>
-            <h4 class="h4 color--primary">{{ item.atitle }}</h4>
+              <div class="col-sm-6">
+                <a href="{{ item.url | absolute_url }}" class="block">
+                  <div class="feature boxed boxed--border border--round text-center">
+                    <i class="color--primary icon--lg {{ item.icon }}"></i>
+                    <h4 class="h4 color--primary">{{ item.atitle }}</h4>
+                  </div>
+                </a>
+              </div>
+              {% endif %} {% endfor %}
+
+            </div>
           </div>
-        </a>
+        </article>
       </div>
-        {% endif %}
-      {% endfor %}
+      <div class="col-md-3 col-md-pull-9 col-sm-12">
+        <div class="boxed boxed--border bg--secondary {{ site.data.spacing.sidebar-spacing }}">
+          <div class="sidebar__widget">
+            <h5>Search Docs</h5>
+            <form action='{{ "/search" | absolute_url }}' method="get">
+              <input type="text" id="search_box" name="query" placeholder="Type search here" />
+            </form>
 
+          </div>
+
+
+          <div class="sidebar__widget">
+            <div class="nav-sidebar-column docs-menu">
+              <ul class="menu-vertical">
+                <li>
+                  <a href='{{ "/docs" | absolute_url }}' class="docs-home">
+                    <!--    <i class="icon-Home icon icon--xs"></i>-->
+                    Docs Home
+                  </a>
+                </li>
+                {% assign docs = site.docs | sort: 'order' %} {% for item in docs %} {% if item.name %}
+                <li class="dropdown {% if page.url contains item.name %}dropdown--active{% endif %}">
+                  <span class="dropdown__trigger">{{ item.atitle }}</span>
+                  <div class="dropdown__container">
+                    <div class="dropdown__content">
+                      <ul class="menu-vertical">
+                        {% if item.name == "user-guide" %} {% assign user-guides = site.docs | where:"category","user-guide" %} {% for item in user-guides %}
+                        <li>
+                          <a href="{{ item.url | absolute_url }}">
+                      {{ item.atitle }}
+                    </a>
+                        </li>
+                        {% endfor %} {% elsif item.name == "developer-guide" %} {% assign developer-guides = site.docs | where:"category","developer-guide" %} {% for item in developer-guides %}
+                        <li>
+                          <a href="{{ item.url | absolute_url }}">
+                      {{ item.atitle }}
+                    </a>
+                        </li>
+                        {% endfor %} {% elsif item.name == "framework-api" %} {% assign framework-apis = site.docs | where:"category","framework-api" %} {% for item in framework-apis %}
+                        <li>
+                          <a href="{{ item.url | absolute_url }}">
+                      {{ item.atitle }}
+                    </a>
+                        </li>
+                        {% endfor %} {% elsif item.name == "tutorials" %} {% assign tutorials = site.docs | where:"category","tutorials" %} {% for item in tutorials %}
+                        <li>
+                          <a href="{{ item.url | absolute_url }}">
+                      {{ item.atitle }}
+                    </a>
+                        </li>
+                        {% endfor %} {% endif %}
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                {% endif %} {% endfor %}
+
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-    <!--end of row-->
   </div>
 </section>

@@ -6,9 +6,10 @@
     <div class="text-block">
       <ul class="menu-vertical">
         <li>
-          <a href='{{ "/docs" | absolute_url }}'>
-<!--          <i class="icon-Home icon icon--xs"></i>-->
-          <strong>Docs Home</strong></a>
+          <a href='{{ "/docs" | absolute_url }}' class="docs-home">
+  <!--    <i class="icon-Home icon icon--xs"></i>-->
+          Docs Home
+          </a>
         </li>
         {% assign docs = site.docs | sort: 'order' %}
 

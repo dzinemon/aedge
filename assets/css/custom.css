@@ -3,6 +3,10 @@
   border-radius: 0;
 }
 
+.menu-vertical li a.docs-home {
+  font-weight: 700;
+}
+
 .menu-vertical li.dropdown:after {
   color: #4a90e2;
 }
@@ -39,3 +43,13 @@
   color: #4a90e2;
 }
 
+.nav-sidebar-column.docs-menu {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  background-color: transparent;
+  border-right: 0;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
