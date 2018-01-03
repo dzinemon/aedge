@@ -1,7 +1,7 @@
 ---
 layout: default
 
-permalink: /search.html
+permalink: /search
 #atitle: 'Showing results for “search”'
 
 #subtitle: results found
@@ -24,7 +24,7 @@ seo:
           An ideal layout for web-apps that require a knowledge repository.
         </p>
         <div class="boxed boxed--lg bg--white text-left">
-          <form class="form--horizontal" action="/search" method="get">
+          <form class="form--horizontal" action='{{ "/search" | absolute_url }}' method="get">
             <div class="col-sm-8">
               <input id="search-box" type="text" name="query" placeholder="Type search keywords here">
             </div>
