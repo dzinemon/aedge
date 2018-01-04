@@ -21,7 +21,11 @@
 
 {% endif %}
 
-{% if page.url contains "search" %}
+{% if page.url == "/search" %}
 <script src='{{ "/assets/js/lunr.js" | absolute_url }}'></script>
 <script src='{{ "/assets/js/search.js" | absolute_url }}'></script>
+{% endif %}
+{% if page.url == "/docs/search" %}
+<script src='{{ "/assets/js/lunr.js" | absolute_url }}'></script>
+<script src='{{ "/assets/js/searchdocs.js" | absolute_url }}'></script>
 {% endif %}

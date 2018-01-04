@@ -5,7 +5,7 @@ author: "AlphaEdge Author"
 
 date:   2017-12-09 01:56:55 +0200
 
-headline: First day in the life of a professional AlphaEdge blogger
+subtitle: First day in the life of a professional AlphaEdge blogger
 categories: momentum
 strategy: momentum
 tags: products

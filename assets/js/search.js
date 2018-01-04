@@ -42,11 +42,13 @@
       this.field('title', { boost: 10 });
       this.field('author');
       this.field('content');
+      this.field('subtitle');
       for (var key in window.store) { // Add the data to lunr
       this.add({
         'id': key,
         'title': window.store[key].title,
         'author': window.store[key].author,
+        'subtitle': window.store[key].subtitle,
         'content': window.store[key].content
       });
     }
