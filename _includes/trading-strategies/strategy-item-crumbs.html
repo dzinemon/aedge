@@ -1,16 +1,20 @@
-<div class="container">
-  <div class="col-sm-12">
-    <ol class="breadcrumbs">
-      <li>
-        <a href='{{ "/" | absolute_url }}'>Home</a>
-      </li>
-      <li>
-        <a href="{{ site.url }}/trading-strategies/">Trading strategies</a>
-      </li>
-      <li>
-        <a href="{{ site.url }}/trading-strategies/{{ page.category }}">{{ page.category | replace: '-', ' ' | capitalize }}</a>
-      </li>
-      <li>{{ page.atitle }}</li>
-    </ol>
+<section class="unpad bg--primary-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <ul class="breadcrumbs pull-right">
+          <li>
+            <a href='{{ "/" | absolute_url }}'>Home</a>
+          </li>
+          <li>
+            <a href="{{ site.url }}/trading-strategies/">Trading strategies</a>
+          </li>
+          <li>
+            <a href="{{ site.url }}/trading-strategies/{{ page.category }}">{{ page.category | replace: '-', ' ' | capitalize }}</a>
+          </li>
+          <li>{{ page.atitle }}</li>
+        </ul>
+      </div>
+    </div>
   </div>
-</div>
+</section>

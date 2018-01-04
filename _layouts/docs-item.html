@@ -4,47 +4,8 @@ layout: docs
 
 ---
 
-  {% if page.atitle %}
-  {% include partials/page-title.html %}
-  {% endif %}
+<div class="row">
 
-  {% if page.name %}
+  <div class="col-md-12">{{ content }}</div>
 
-  <div class="container">
-  <div class="col-sm-12">
-    <ol class="breadcrumbs">
-      <li>
-        <a href='{{ "/docs" | absolute_url }}'>Documentation</a>
-      </li>
-      <li>{{ page.atitle }}</li>
-    </ol>
-  </div>
 </div>
-
-
-  {% else %}
-  <div class="container">
-  <div class="col-sm-12">
-    <ol class="breadcrumbs">
-      <li>
-        <a href='{{ "/docs" | absolute_url }}'>Documentation</a>
-      </li>
-      <li>
-        <a href="{{ site.url }}/docs/{{ page.category }}/">{{ page.category | replace: '-', ' ' | capitalize }}</a>
-      </li>
-      <li>{{ page.atitle }}</li>
-    </ol>
-  </div>
-</div>
-
-
-  {% endif %}
-
-
-<section class="unpad">
-  <div class="container">
-    <div class="col-sm-12">
-      {{ content }}
-    </div>
-  </div>
-</section>

@@ -1,7 +1,7 @@
 ---
 layout: default
 
-permalink: /search.html
+permalink: /search
 #atitle: 'Showing results for “search”'
 
 #subtitle: results found
@@ -15,7 +15,7 @@ seo:
 ---
 
 
-<section class="text-center space--xs bg--primary-1" data-overlay="3">
+<section class="text-center {{ site.data.spacing.spacing-class }} bg--primary-1" data-overlay="3">
   <div class="container">
     <div class="row">
       <div class="col-sm-10 col-md-8">
@@ -24,7 +24,7 @@ seo:
           An ideal layout for web-apps that require a knowledge repository.
         </p>
         <div class="boxed boxed--lg bg--white text-left">
-          <form class="form--horizontal" action="/search" method="get">
+          <form class="form--horizontal" action='{{ "/search" | absolute_url }}' method="get">
             <div class="col-sm-8">
               <input id="search-box" type="text" name="query" placeholder="Type search keywords here">
             </div>
@@ -40,7 +40,7 @@ seo:
   <!--end of container-->
 </section>
 
-<section class="space--xs">
+<section class="{{ site.data.spacing.spacing-class }}">
   <div class="container">
     <div class="row">
       <div class="col-sm-8 col-md-offset-2">
@@ -52,6 +52,7 @@ seo:
               "{{ post.url | slugify }}": {
                 "title": "{{ post.title | xml_escape }}",
                 "author": "{{ post.author | xml_escape }}",
+                "subtitle": "{{ post.subtitle | xml_escape }}",
                 "content": {{ post.content | strip_html | strip_newlines | jsonify }},
                 "url": "{{ post.url | xml_escape }}"
               }

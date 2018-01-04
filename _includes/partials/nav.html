@@ -35,13 +35,13 @@
           <div class="bar__module">
             <ul class="menu-horizontal text-left">
               <li class="dropdown dropdown--hover">
-                <span class="dropdown__trigger">Trading Solutions</span>
+                <a class="dropdown__trigger" href="{{ '/trading-software-solutions' | absolute_url }}">Trading Solutions</a>
                 <div class="dropdown__container">
                   <div class="container">
                     <div class="row">
                       <div class="dropdown__content col-md-2 col-sm-4">
                         <ul class="menu-vertical">
-                        {% assign solutions = site.trading-software-solutions | where:"category","trading-software-solutions" %}
+                        {% assign solutions = site.trading-software-solutions | where:"category","trading-software-solutions" | sort: "order" %}
 
                         {% for item in solutions %}
                           <li>
@@ -60,13 +60,13 @@
                 <!--end dropdown container-->
               </li>
               <li class="dropdown dropdown--hover">
-                <span class="dropdown__trigger">Strategies</span>
+                <a class="dropdown__trigger" href="{{ '/trading-strategies' | absolute_url }}">Strategies</a>
                 <div class="dropdown__container">
                   <div class="container">
                     <div class="row">
                       <div class="dropdown__content col-md-2 col-sm-4">
                         <ul class="menu-vertical">
-                        {% assign strategies = site.trading-strategies %}
+                        {% assign strategies = site.trading-strategies | sort: "order" %}
 
                         {% for item in strategies %}
                         {% if item.name %}
@@ -95,7 +95,7 @@
 
 
               <li class="dropdown dropdown--hover">
-                <span class="dropdown__trigger">Docs</span>
+                <a class="dropdown__trigger" href="{{ '/docs' | absolute_url }}">Docs</a>
                 <div class="dropdown__container">
                   <div class="container">
                     <div class="row">
@@ -152,28 +152,28 @@
               </li>
               <li>
                 <a href='{{ "/blog" | absolute_url }}'>
-                                    Blog
-                                </a>
+                  Blog
+                </a>
               </li>
               <li>
                 <a href='{{ "#" | absolute_url }}'>
-                                   About
-                                </a>
+                  About
+                </a>
               </li>
             </ul>
           </div>
           <!--end module-->
           <div class="bar__module">
             <a class="btn btn--sm type--uppercase" href="#">
-                                    <span class="btn__text">
-                                        Download
-                                    </span>
-                        </a>
+              <span class="btn__text">
+                  Download
+              </span>
+            </a>
             <a class="btn btn--sm btn--primary type--uppercase" href="#">
-                                    <span class="btn__text">
-                                        Try now
-                                    </span>
-                        </a>
+              <span class="btn__text">
+                  Try now
+              </span>
+            </a>
           </div>
           <!--end module-->
         </div>

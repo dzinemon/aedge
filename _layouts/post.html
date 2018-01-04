@@ -11,13 +11,13 @@
   {% include partials/nav.html %}
   <div class="main-container">
 
-    <section class="space--sm">
+    <section class="{{ site.data.spacing.spacing-class }}">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-8">
             <article>
               <div class="article__title text-center">
-                <h1 class="h2">{{ page.headline }}</h1>
+                <h1 class="h2">{{ page.subtitle }}</h1>
                 <span>{{ page.date | date: '%B %d, %Y' }}</span>
                 <span>
                   <a href="/category/{{ page.strategy }}">{{ page.strategy | replace: '-', ' ' | capitalize }}</a>
@@ -42,7 +42,7 @@
                 </a>
               </div>
             </article>
-            <section class="text-center space--sm">
+            <section class="text-center {{ site.data.spacing.spacing-class }} unpad--bottom">
               <div class="container">
                 <div class="row">
 
@@ -78,7 +78,7 @@
       <!--end of container-->
     </section>
     {% include blog/recent-posts.html %}
-    {% include footer.html bg-class="" %}
+    {% include footer.html bg-class="bg--dark" %}
   </div>
   <!--<div class="loader"></div>-->
   <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">

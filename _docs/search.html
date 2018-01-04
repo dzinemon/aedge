@@ -1,0 +1,57 @@
+---
+layout: docs
+
+permalink: /docs/search
+atitle: 'Showing results for “search” in docs'
+
+subtitle: results found
+
+title: AlphaEdge Search Results Page
+
+description: AlphaEdge | Search Results Page - Description 160-260 chars
+
+seo:
+  type: SearchResultsPage
+---
+
+
+<div class="row">
+  <div class="col-sm-12">
+    <form class="form--horizontal" action='{{ "/docs/search" | absolute_url }}' method="get">
+      <div class="col-sm-6">
+        <input id="search-box" type="text" name="query" placeholder="Search in the docs">
+      </div>
+      <div class="col-sm-3">
+        <button type="submit" class="btn btn--primary type--uppercase">Search</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!--end of row-->
+<!--end of container-->
+
+<section class="{{ site.data.spacing.spacing-class }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <ul class="results-list" id="search-results"></ul>
+
+        <script>
+          window.store = {
+            {% for post in site.docs %}
+              "{{ post.url | slugify }}": {
+                "title": "{{ post.title | xml_escape }}",
+                "author": "{{ post.author | xml_escape }}",
+                "subtitle": "{{ post.subtitle | xml_escape }}",
+                "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+                "url": "{{ post.url | xml_escape }}"
+              }
+              {% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          };
+        </script>
+
+      </div>
+    </div>
+  </div>
+</section>

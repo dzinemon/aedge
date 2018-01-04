@@ -5,17 +5,68 @@
   {% include head.html %}
 </head>
 
-<body class="bg--white">
+<body class="">
   <a id="start"></a>
 
   {% include partials/nav.html %}
 
-  {% include docs/nav-sidebar.html %}
-
+  {% if page.atitle %}
+  {% include partials/page-title.html %}
+  {% endif %}
 
   <div class="main-container">
+    {% if page.layout == 'docs-item '%}
+      {% if page.name %}
+        <section class="unpad bg--primary-1">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <ul class="breadcrumbs pull-right">
+                  <li>
+                    <a href='{{ "/docs" | absolute_url }}'>Documentation</a>
+                  </li>
+                  <li>{{ page.atitle }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        {% else %}
+        <section class="unpad bg--primary-1">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <ul class="breadcrumbs pull-right">
+                  <li>
+                    <a href='{{ "/docs" | absolute_url }}'>Documentation</a>
+                  </li>
+                  <li>
+                    <a href="{{ site.url }}/docs/{{ page.category }}/">{{ page.category | replace: '-', ' ' | capitalize }}</a>
+                  </li>
+                  <li>{{ page.atitle }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      {% endif %}
+    {% endif %}
 
-    {{ content }}
+
+    <section class="{{ site.data.spacing.spacing-class }}">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-md-push-3 col-sm-12">
+            <article class="mb--3">
+              {{ content }}
+            </article>
+          </div>
+          <div class="col-md-3 col-md-pull-9 col-sm-12">
+            {% include docs/nav-menu.html %}
+          </div>
+        </div>
+      </div>
+    </section>
 
     {% include docs/docs-footer.html %}
   </div>

@@ -1,0 +1,103 @@
+<div class="boxed boxed--border bg--secondary {{ site.data.spacing.sidebar-spacing }}">
+
+  <div class="sidebar__widget">
+    <div class="nav-sidebar-column docs-menu">
+      <ul class="menu-vertical">
+
+        <li>
+          <a href='{{ "/trading-strategies" | absolute_url }}' class="docs-home">
+          Overview
+          </a>
+        </li>
+
+        {% assign strategies = site.trading-strategies | sort: 'order' %}
+
+        {% for item in strategies %}
+        {% if item.name %}
+        <li class="dropdown {% if page.url contains item.name %}dropdown--active{% endif %}">
+          <span class="dropdown__trigger">{{ item.name | replace: '-', ' ' | capitalize }}</span>
+          <div class="dropdown__container">
+            <div class="dropdown__content">
+              <ul class="menu-vertical">
+
+                {% if item.name == 'mean-reversion' %}
+        {% assign reversions = site.trading-strategies | where:"category","mean-reversion" | sort: 'title' %}
+
+        {% for item in reversions %}
+
+            <li>
+              <a href="{{ item.url | absolute_url }}">{{ item.atitle }}</a>
+            </li>
+
+
+        {% endfor %}
+
+      {% elsif item.name == 'technical-analysis' %}
+
+        {% assign analysys = site.trading-strategies | where:"category","technical-analysis" | sort: 'title' %}
+
+        {% for item in analysys %}
+
+
+            <li>
+              <a href="{{ item.url | absolute_url }}">{{ item.atitle }}</a>
+            </li>
+
+
+        {% endfor %}
+
+      {% elsif item.name == 'volatility' %}
+
+        {% assign volatilities = site.trading-strategies | where:"category","volatility" | sort: 'title' %}
+
+        {% for item in volatilities %}
+
+
+            <li>
+              <a href="{{ item.url | absolute_url }}">{{ item.atitle }}</a>
+            </li>
+
+
+        {% endfor %}
+
+      {% elsif item.name == 'momentum' %}
+
+        {% assign momentums = site.trading-strategies | where:"category","momentum" | sort: 'title' %}
+
+        {% for item in momentums %}
+
+
+            <li>
+              <a href="{{ item.url | absolute_url }}">{{ item.atitle }}</a>
+            </li>
+
+
+        {% endfor %}
+
+      {% elsif item.name == 'portfolio-optimization' %}
+
+        {% assign optimizations = site.trading-strategies | where:"category","portfolio-optimization" | sort: 'title' %}
+
+        {% for item in optimizations %}
+
+
+            <li>
+              <a href="{{ item.url | absolute_url }}">{{ item.atitle }}</a>
+            </li>
+
+
+        {% endfor %}
+
+      {% endif %}
+
+              </ul>
+            </div>
+          </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+
+      </ul>
+    </div>
+  </div>
+</div>

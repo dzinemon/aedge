@@ -3,6 +3,10 @@ layout: docs
 
 permalink: /docs/
 
+atitle: AlphaEdge Docs
+
+subtitle: Alpahedge provides support for users and developers
+
 title: AlphaEdge Docs page
 
 description: AlphaEdge | Docs page - Description 160-260 chars
@@ -13,59 +17,23 @@ seo:
 ---
 
 
-<section class="imagebg image--light cover cover-blocks bg--secondary space--xs">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-lg-6 col-md-offset-1">
-        <div>
-          <h1>AlphaEdge Docs</h1>
-          <p class="lead">
-            Stack includes support for a sidebar column navigation the left, or right of the page
-          </p>
-          <div class="text-left">
-            <form class="form--horizontal">
-              <div class="col-sm-8">
-                <input type="text" name="search" placeholder="Type search keywords here">
-              </div>
-              <div class="col-sm-4">
-                <button type="submit" class="btn btn--primary type--uppercase">Search</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--end of row-->
+<div class="row">
+  <div class="col-sm-12">
+    <h2 class="text-center">Getting Started With AlphaEdge</h2>
   </div>
-  <!--end of container-->
-</section>
+</div>
 
+<div class="row">
+  {% assign docs = site.docs | sort: 'order' %} {% for item in docs %} {% if item.name %}
 
-<section class="space--xs">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2 class="">Getting Started With AlphaEdge</h2>
+  <div class="col-sm-6 col-xs-12">
+    <a href="{{ item.url | absolute_url }}" class="block">
+      <div class="feature boxed boxed--border border--round text-center">
+        <i class="color--primary icon--lg {{ item.icon }}"></i>
+        <h4 class="h4 color--primary">{{ item.atitle }}</h4>
       </div>
-    </div>
-    <div class="row">
-      {% assign docs = site.docs | sort: 'order' %}
-
-      {% for item in docs %}
-        {% if item.name %}
-
-      <div class="col-sm-3">
-        <a href="{{ item.url | absolute_url }}" class="block">
-          <div class="feature boxed boxed--border border--round text-center">
-            <i class="color--primary icon--lg {{ item.icon }}"></i>
-            <h4 class="h4 color--primary">{{ item.atitle }}</h4>
-          </div>
-        </a>
-      </div>
-        {% endif %}
-      {% endfor %}
-
-    </div>
-    <!--end of row-->
+    </a>
   </div>
-</section>
+  {% endif %} {% endfor %}
+
+</div>

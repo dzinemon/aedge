@@ -1,0 +1,82 @@
+{% if page.url contains 'mean-reversion' %}
+<section class="bg--secondary {{ site.data.spacing.spacing-class }}">
+  <div class="container">
+    <div class="row">
+      {% assign revisions = site.trading-strategies | where:"category","mean-reversion" %}
+
+      {% for item in revisions %}
+
+        {% include trading-strategies/category-thumb.html %}
+
+      {% endfor %}
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+{% elsif page.url contains 'volatility' %}
+<section class="bg--secondary {{ site.data.spacing.spacing-class }}">
+  <div class="container">
+    <div class="row">
+      {% assign volatilities = site.trading-strategies | where:"category","volatility" %}
+
+      {% for item in volatilities %}
+
+        {% include trading-strategies/category-thumb.html %}
+
+      {% endfor %}
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+{% elsif page.url contains 'technical-analysis' %}
+<section class="bg--secondary {{ site.data.spacing.spacing-class }}">
+  <div class="container">
+    <div class="row">
+      {% assign analysys = site.trading-strategies | where:"category","technical-analysis" %}
+
+      {% for item in analysys %}
+
+        {% include trading-strategies/category-thumb.html %}
+
+      {% endfor %}
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+{% elsif page.url contains 'portfolio-optimization' %}
+<section class="bg--secondary {{ site.data.spacing.spacing-class }}">
+  <div class="container">
+    <div class="row">
+      {% assign optimizations = site.trading-strategies | where:"category","portfolio-optimization" %}
+
+      {% for item in optimizations %}
+
+        {% include trading-strategies/category-thumb.html %}
+
+      {% endfor %}
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+{% elsif page.url contains 'momentum' %}
+<section class="bg--secondary {{ site.data.spacing.spacing-class }}">
+  <div class="container">
+    <div class="row">
+      {% assign momentums = site.trading-strategies | where:"category","momentum" %}
+
+      {% for item in momentums %}
+
+        {% include trading-strategies/category-thumb.html %}
+
+      {% endfor %}
+
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+{% endif %}
