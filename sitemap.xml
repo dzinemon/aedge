@@ -1,0 +1,33 @@
+---
+
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--Posts-->
+  {% for post in site.posts %}
+    {% include sitemap-item.xml item=post %}
+  {% endfor %}
+<!--Pages-->
+  {% for page in site.pages %}
+    {% if page.layout %}
+      {% include sitemap-item.xml item=page %}
+    {% endif %}
+  {% endfor %}
+
+<!--Trading solutions Pages-->
+  {% for page in site.trading-software-solutions %}
+      {% include sitemap-item.xml item=page %}
+  {% endfor %}
+
+<!--Trading strategies-->
+  {% for page in site.trading-strategies %}
+      {% include sitemap-item.xml item=page %}
+  {% endfor %}
+<!--Documentation-->
+  {% for page in site.docs %}
+      {% include sitemap-item.xml item=page %}
+  {% endfor %}
+
+</urlset>
+
