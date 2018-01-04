@@ -1,0 +1,9 @@
+<url>
+  <loc>{{ site.url }}{{ include.item.url }}</loc>
+  {% if include.item.changefreq %}
+  <changefreq>{{ include.item.changefreq }}</changefreq>
+  {% endif %}
+  {% if include.item.priority %}
+  <priority>{{ include.item.priority }}</priority>
+  {% endif %}
+</url>
