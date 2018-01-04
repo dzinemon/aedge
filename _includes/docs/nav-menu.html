@@ -1,10 +1,12 @@
 <div class="boxed boxed--border bg--secondary {{ site.data.spacing.sidebar-spacing }}">
-  <div class="sidebar__widget">
+  {% unless page.url == '/docs/search' %}
+   <div class="sidebar__widget">
     <h5>Search Docs</h5>
     <form action='{{ "/docs/search" | absolute_url }}' method="get">
       <input type="text" id="search_box" name="query" placeholder="Type search here" />
     </form>
   </div>
+  {% endunless %}
 
   <div class="sidebar__widget">
     <div class="nav-sidebar-column docs-menu">
