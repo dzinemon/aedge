@@ -14,12 +14,12 @@
   {% include partials/page-title.html %}
   {% endif %}
 
-  {% if page.permalink %}
-    {% include trading-strategies/strategies-crumbs.html %} 
+  {% if page.permalink == '/trading-strategies/' %}
+    {% include trading-strategies/strategies-crumbs.html %}
   {% else %}
     {% include trading-strategies/strategies-cat-crumbs.html %}
   {% endif %}
-   
+
     <section class="{{ site.data.spacing.spacing-class }}">
       <div class="container">
         <div class="row">
